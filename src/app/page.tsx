@@ -7,7 +7,8 @@ import Image from 'next/image'
 import { Edition } from '@/components/edition'
 import { BreakingNews } from '@/components/breaking-news'
 import Newspaper from '@/components/icons/newspaper'
-import Dot from '@/components/icons/dot'
+import BookmarksSimple from '@/components/icons/bookmark-simple'
+import { Notice } from '@/components/notice'
 
 export default function Home() {
   const monthlyEditions = [
@@ -128,106 +129,148 @@ export default function Home() {
       <div className="w-full max-w-[1215px] mx-auto mt-8">
         <BreakingNews />
 
-        <div className="w-full flex justify-center items-center mt-16 h-[156px] bg-gray-400 rounded-lg">
+        <div className="w-full text-justiça flex justify-center items-center mt-16 h-[156px] bg-gray-400 rounded-lg">
           ADS
         </div>
 
-        <section className="mt-24 w-full pb-4 border-b border-gray-500">
+        <section className="mt-24 w-full pb-8 border-b border-gray-500">
           <h2 className="font-ptserif font-bold text-black flex items-center gap-2">
             <Newspaper size={24} weight="fill" className="text-orange-200" />
             Últimas notícias
           </h2>
 
           <div className="flex items-start justify-between mt-8">
-            <div className="w-[800px] flex flex-col gap-4 cursor-pointer">
-              <div className="w-full relative overflow-hidden h-[400px] bg-gray-100 rounded-lg flex items-center justify-center">
-                Imagem
-                <div className="absolute bottom-0 h-1 w-full bg-mundo" />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <small className="text-mundo text-sm font-semibold font-manrope flex items-center">
-                  MUNDO
-                  <span className="inline-block w-[6px] h-[6px] bg-mundo rounded-full ml-2 mr-2"></span>
-                  <span className="text-gray-200 font-normal">
-                    Publicado agora
-                  </span>
-                </small>
-                <h2 className="text-black text-[32px]">
-                  Trump deve se apresentar hoje à Justiça
-                </h2>
-                <p className="text-gray-100 text-base">
-                  Ex-presidente dos EUA nega qualquer irregularidade e criticou
-                  as acusações que enfrente em um evento de campanha no sábado
-                  (10)
-                </p>
-              </div>
+            <div className="w-[800px] text-política">
+              <Notice
+                category="mundo"
+                createdAt="2021-09-13T15:00:00.000Z"
+                title="Trump deve se apresentar hoje à Justiça"
+                description="Ex-presidente dos EUA nega qualquer irregularidade e criticou as acusações que enfrente em um evento de campanha no sábado (10)"
+                image=""
+                size="large"
+              />
             </div>
 
             <div className="w-[380px] flex flex-col gap-8">
-              <div className="flex flex-col gap-4 cursor-pointer">
-                <div className="w-full overflow-hidden h-[220px] rounded-lg bg-gray-100 flex items-center justify-center relative">
-                  IMAGEM
-                  <div className="absolute bottom-0 h-1 w-full bg-justiça" />
-                </div>
+              <Notice
+                category="justiça"
+                createdAt="2021-09-13T15:00:00.000Z"
+                image=""
+                size="medium"
+                title="Trump deve se apresentar hoje à Justiça"
+              />
 
-                <div className="flex flex-col gap-2">
-                  <small className="text-justiça text-sm font-semibold font-manrope flex items-center">
-                    JUSTIÇA
-                    <span className="inline-block w-[6px] h-[6px] bg-justiça rounded-full ml-2 mr-2"></span>
-                    <span className="text-gray-200 font-normal">
-                      8 horas atrás
-                    </span>
-                  </small>
-                  <h2 className="text-black text-2xl">
-                    Trump deve se apresentar hoje à Justiça, lorem ipsum dolor
-                  </h2>
-                </div>
+              <div className="w-full bg-gray-500 h-[1px] text-brasil" />
+
+              <div className="flex flex-col gap-4">
+                <Notice
+                  category="brasil"
+                  createdAt="2021-09-13T15:00:00.000Z"
+                  image=""
+                  size="small"
+                  title="Trump deve se apresentar hoje à Justiça"
+                />
+                <Notice
+                  category="mundo"
+                  createdAt="2021-09-13T15:00:00.000Z"
+                  image=""
+                  size="small"
+                  title="Trump deve se apresentar hoje à Justiça"
+                />
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="w-full bg-gray-500 h-[1px]" />
+        <section className="w-full flex flex-col mt-8 gap-10">
+          <div className="grid grid-cols-3 gap-10 text-mundo">
+            <Notice
+              category="mundo"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="medium"
+              title="Trump deve se apresentar hoje à Justiça"
+            />
+            <Notice
+              category="política"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="medium"
+              title="Trump deve se apresentar hoje à Justiça"
+            />
+            <Notice
+              category="justiça"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="medium"
+              title="Trump deve se apresentar hoje à Justiça"
+            />
+          </div>
 
-              <div className="flex flex-col gap-6">
-                <div className="flex gap-5 w-full cursor-pointer">
-                  <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
-                    IMAGEM
-                    <div className="absolute bottom-0 h-1 w-full bg-brasil" />
-                  </div>
+          <div className="flex items-start justify-between">
+            <div className="max-w-[380px] flex flex-col gap-6">
+              <header className="flex items-center gap-2">
+                <h2 className="text-2xl flex items-center gap-2 font-ptserif font-bold text-black">
+                  <BookmarksSimple
+                    size={24}
+                    weight="fill"
+                    className="text-orange-200"
+                  />
+                  Mais lidas
+                </h2>
+              </header>
 
-                  <div className="w-[calc(100%-116px)] flex flex-col gap-3">
-                    <small className="text-brasil text-sm font-semibold font-manrope flex items-center">
-                      BRAZIL
-                      <span className="inline-block w-[6px] h-[6px] bg-brasil rounded-full ml-2 mr-2"></span>
-                      <span className="text-gray-200 font-normal">
-                        29/08/23
-                      </span>
-                    </small>
-                    <h2 className="text-black text-base">
-                      Trump deve se apresentar hoje à Justiça, lorem ipsum
-                    </h2>
-                  </div>
+              <div className="flex flex-col">
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                  <p className="text-orange-400">1</p>
+
+                  <p className="text-black font-semibold text-base">
+                    Brasil teme nova crise de imigrantes no Acre após Chile e
+                    Peru endurecerem contra imigrantes
+                  </p>
                 </div>
-                <div className="flex gap-5 w-full cursor-pointer">
-                  <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
-                    IMAGEM
-                    <div className="absolute bottom-0 h-1 w-full bg-mundo" />
-                  </div>
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                  <p className="text-orange-400">2</p>
 
-                  <div className="w-[calc(100%-116px)] flex flex-col gap-3">
-                    <small className="text-mundo text-sm font-semibold font-manrope flex items-center">
-                      MUNDO
-                      <span className="inline-block w-[6px] h-[6px] bg-mundo rounded-full ml-2 mr-2"></span>
-                      <span className="text-gray-200 font-normal">
-                        29/08/23
-                      </span>
-                    </small>
-                    <h2 className="text-black text-base">
-                      Trump deve se apresentar hoje à Justiça, lorem ipsum
-                    </h2>
-                  </div>
+                  <p className="text-black font-semibold text-base">
+                    Invasor que fez live na cadeira de Moraes é preso
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                  <p className="text-orange-400">3</p>
+
+                  <p className="text-black font-semibold text-base">
+                    Rosa Weber: como ministra acabou com farra dos pedidos de
+                    vistas e foi contraponto a ministros políticos
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                  <p className="text-orange-400">4</p>
+
+                  <p className="text-black font-semibold text-base">
+                    Oposição articula PEC que permitiria ao Congresso Nacional
+                    barrar decisões do STF
+                  </p>
+                </div>
+                <div className="flex items-start gap-4 pb-6 mb-6">
+                  <p className="text-orange-400">5</p>
+
+                  <p className="text-black font-semibold text-base">
+                    Campos Neto pediu e Lula vai recebê-lo no Planalto pela
+                    primeira vez
+                  </p>
                 </div>
               </div>
             </div>
+
+            <Notice
+              title="Trump deve se apresentar hoje à Justiça"
+              category="mundo"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="large"
+              description="Ex-presidente dos EUA nega qualquer irregularidade e criticou as acusações que enfrente em um evento de campanha no sábado (10)"
+            />
           </div>
         </section>
       </div>

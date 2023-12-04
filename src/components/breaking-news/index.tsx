@@ -41,23 +41,24 @@ export function BreakingNews() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % news.length)
-      setProgress(0)
-    }, 10000)
+    const updateInterval = 100 // Intervalo de atualização do progresso em milissegundos
+    const totalDuration = 10000 // Duração total para mudar a notícia em milissegundos
 
-    const progressInterval = setInterval(() => {
+    const interval = setInterval(() => {
       setProgress((prevProgress) => {
-        if (prevProgress < 100) {
-          return prevProgress + 1
+        const newProgress =
+          prevProgress + (updateInterval / totalDuration) * 100
+
+        if (newProgress >= 100) {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % news.length)
+          return 0 // Reiniciar o progresso ao atingir 100%
         }
-        return 0
+        return newProgress
       })
-    }, 100)
+    }, updateInterval)
 
     return () => {
       clearInterval(interval)
-      clearInterval(progressInterval)
     }
   }, [])
 
@@ -118,7 +119,7 @@ export function BreakingNews() {
       </div>
 
       <div
-        className="absolute bottom-0 bg-orange-400 transition-all duration-1000"
+        className="absolute bottom-0 bg-orange-400 transition-all duration-300 ease-linear"
         style={{ height: '1.5px', width: `${progress}%` }}
       />
     </div>
