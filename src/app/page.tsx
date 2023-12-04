@@ -1,112 +1,235 @@
+import Button from '@/components/button'
+import BookBookmark from '../components/icons/book-bookmark'
+import CaretRight from '../components/icons/caret-right'
+import CaretLeft from '../components/icons/caret-left'
+import Banner from '../assets/banner.png'
 import Image from 'next/image'
+import { Edition } from '@/components/edition'
+import { BreakingNews } from '@/components/breaking-news'
+import Newspaper from '@/components/icons/newspaper'
+import Dot from '@/components/icons/dot'
 
 export default function Home() {
+  const monthlyEditions = [
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: true,
+    },
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: false,
+    },
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: false,
+    },
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: false,
+    },
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: false,
+    },
+    {
+      title: 'Capa',
+      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
+      isFree: false,
+    },
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="w-full border-y-2 border-orange-200 h-[506px] py-[56px] bg-black">
+        <div className="w-full mx-auto max-w-[1215px] flex flex-col gap-8">
+          <header className="flex justify-between items-center">
+            <h2 className="font-ptserif font-bold text-2xl flex items-center gap-2 tracking-[-2%]">
+              <BookBookmark
+                size={24}
+                weight="fill"
+                className="text-orange-200"
+              />
+              Edição do Mês
+            </h2>
+
+            <Button
+              variant="tertiary"
+              className="flex items-center gap-[10px] text-white"
+            >
+              Ver todas as edições
+              <CaretRight size={16} className="text-orange-200" weight="bold" />
+            </Button>
+          </header>
+
+          <div className="h-[325px] w-full flex gap-16 justify-between">
+            <div className="relative">
+              <Image
+                src={Banner}
+                alt="Banner"
+                width={200}
+                height={315}
+                quality={100}
+                className="relative z-10 w-[200px] h-[315px]"
+              />
+
+              <div
+                style={{
+                  background:
+                    'radial-gradient(100% 50.41% at 0% 48.27%, rgba(242, 77, 0, 0.70) 0%, rgba(242, 77, 0, 0.00) 100%)',
+                }}
+                className="absolute w-[80px] h-[320px] transform -rotate-90 -bottom-[51%] left-[35%] "
+              />
+            </div>
+            <div className="h-[325px] w-[calc(100%-300px)] flex flex-col gap-10">
+              <div className="grid grid-cols-3 h-[258px]">
+                {monthlyEditions.map((edition, index) => (
+                  <Edition
+                    key={index}
+                    title={edition.title}
+                    desc={edition.desc}
+                    isFree={edition.isFree}
+                  />
+                ))}
+              </div>
+
+              <footer className="flex justify-between items-center">
+                <div className="flex gap-2 items-center">
+                  <button className="w-10 h-[2px] bg-orange-200" />
+                  <button className="w-10 h-[2px] bg-gray-200" />
+                  <button className="w-10 h-[2px] bg-gray-200" />
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <button>
+                    <CaretLeft
+                      size={24}
+                      weight="bold"
+                      className="text-gray-200 transition-all duration-200 hover:text-orange-200"
+                    />
+                  </button>
+                  <button>
+                    <CaretRight
+                      size={24}
+                      weight="bold"
+                      className="text-gray-700 transition-all duration-200 hover:text-orange-200"
+                    />
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <div className="w-full max-w-[1215px] mx-auto mt-8">
+        <BreakingNews />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="w-full flex justify-center items-center mt-16 h-[156px] bg-gray-400 rounded-lg">
+          ADS
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+        <section className="mt-24 w-full pb-4 border-b border-gray-500">
+          <h2 className="font-ptserif font-bold text-black flex items-center gap-2">
+            <Newspaper size={24} weight="fill" className="text-orange-200" />
+            Últimas notícias
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="flex items-start justify-between mt-8">
+            <div className="w-[800px] flex flex-col gap-4 cursor-pointer">
+              <div className="w-full relative overflow-hidden h-[400px] bg-gray-100 rounded-lg flex items-center justify-center">
+                Imagem
+                <div className="absolute bottom-0 h-1 w-full bg-mundo" />
+              </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+              <div className="flex flex-col gap-2">
+                <small className="text-mundo text-sm font-semibold font-manrope flex items-center">
+                  MUNDO
+                  <span className="inline-block w-[6px] h-[6px] bg-mundo rounded-full ml-2 mr-2"></span>
+                  <span className="text-gray-200 font-normal">
+                    Publicado agora
+                  </span>
+                </small>
+                <h2 className="text-black text-[32px]">
+                  Trump deve se apresentar hoje à Justiça
+                </h2>
+                <p className="text-gray-100 text-base">
+                  Ex-presidente dos EUA nega qualquer irregularidade e criticou
+                  as acusações que enfrente em um evento de campanha no sábado
+                  (10)
+                </p>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <div className="w-[380px] flex flex-col gap-8">
+              <div className="flex flex-col gap-4 cursor-pointer">
+                <div className="w-full overflow-hidden h-[220px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+                  IMAGEM
+                  <div className="absolute bottom-0 h-1 w-full bg-justiça" />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <small className="text-justiça text-sm font-semibold font-manrope flex items-center">
+                    JUSTIÇA
+                    <span className="inline-block w-[6px] h-[6px] bg-justiça rounded-full ml-2 mr-2"></span>
+                    <span className="text-gray-200 font-normal">
+                      8 horas atrás
+                    </span>
+                  </small>
+                  <h2 className="text-black text-2xl">
+                    Trump deve se apresentar hoje à Justiça, lorem ipsum dolor
+                  </h2>
+                </div>
+              </div>
+
+              <div className="w-full bg-gray-500 h-[1px]" />
+
+              <div className="flex flex-col gap-6">
+                <div className="flex gap-5 w-full cursor-pointer">
+                  <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+                    IMAGEM
+                    <div className="absolute bottom-0 h-1 w-full bg-brasil" />
+                  </div>
+
+                  <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+                    <small className="text-brasil text-sm font-semibold font-manrope flex items-center">
+                      BRAZIL
+                      <span className="inline-block w-[6px] h-[6px] bg-brasil rounded-full ml-2 mr-2"></span>
+                      <span className="text-gray-200 font-normal">
+                        29/08/23
+                      </span>
+                    </small>
+                    <h2 className="text-black text-base">
+                      Trump deve se apresentar hoje à Justiça, lorem ipsum
+                    </h2>
+                  </div>
+                </div>
+                <div className="flex gap-5 w-full cursor-pointer">
+                  <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+                    IMAGEM
+                    <div className="absolute bottom-0 h-1 w-full bg-mundo" />
+                  </div>
+
+                  <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+                    <small className="text-mundo text-sm font-semibold font-manrope flex items-center">
+                      MUNDO
+                      <span className="inline-block w-[6px] h-[6px] bg-mundo rounded-full ml-2 mr-2"></span>
+                      <span className="text-gray-200 font-normal">
+                        29/08/23
+                      </span>
+                    </small>
+                    <h2 className="text-black text-base">
+                      Trump deve se apresentar hoje à Justiça, lorem ipsum
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   )
