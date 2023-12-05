@@ -588,6 +588,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -596,8 +600,8 @@ video {
   margin-right: 0.5rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-24 {
@@ -614,14 +618,6 @@ video {
 
 .mt-\[72px\] {
   margin-top: 72px;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .inline-block {
@@ -692,6 +688,10 @@ video {
   height: 325px;
 }
 
+.h-\[370px\] {
+  height: 370px;
+}
+
 .h-\[38px\] {
   height: 38px;
 }
@@ -722,10 +722,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[370px\] {
-  height: 370px;
 }
 
 .w-10 {
@@ -871,6 +867,10 @@ video {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -1044,6 +1044,16 @@ video {
   background-color: rgb(7 7 7 / var(--tw-bg-opacity));
 }
 
+.bg-brasil {
+  --tw-bg-opacity: 1;
+  background-color: rgb(80 203 38 / var(--tw-bg-opacity));
+}
+
+.bg-economia {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 174 101 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(68 68 68 / var(--tw-bg-opacity));
@@ -1067,6 +1077,16 @@ video {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(247 247 247 / var(--tw-bg-opacity));
+}
+
+.bg-justi\E7 a {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 43 43 / var(--tw-bg-opacity));
+}
+
+.bg-mundo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 174 255 / var(--tw-bg-opacity));
 }
 
 .bg-orange-100 {
@@ -1094,29 +1114,9 @@ video {
   background-color: rgb(255 237 229 / var(--tw-bg-opacity));
 }
 
-.bg-brasil {
-  --tw-bg-opacity: 1;
-  background-color: rgb(80 203 38 / var(--tw-bg-opacity));
-}
-
-.bg-economia {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 174 101 / var(--tw-bg-opacity));
-}
-
-.bg-justi\E7 a {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 43 43 / var(--tw-bg-opacity));
-}
-
 .bg-pol\EDtica {
   --tw-bg-opacity: 1;
   background-color: rgb(243 190 0 / var(--tw-bg-opacity));
-}
-
-.bg-mundo {
-  --tw-bg-opacity: 1;
-  background-color: rgb(87 174 255 / var(--tw-bg-opacity));
 }
 
 .fill-\[\#070707\] {
@@ -1166,6 +1166,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1201,11 +1206,6 @@ video {
   padding-bottom: 5px;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1222,6 +1222,14 @@ video {
   padding-right: 0.625rem;
 }
 
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pl-\[0\!important\] {
+  padding-left: 0 !important;
+}
+
 .font-manrope {
   font-family: var(--font-manrope);
 }
@@ -1233,6 +1241,18 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
+.text-\[2rem\] {
+  font-size: 2rem;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
 }
 
 .text-base {
@@ -1248,10 +1268,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
 }
 
 .font-bold {
@@ -1286,6 +1302,11 @@ video {
 .text-brasil {
   --tw-text-opacity: 1;
   color: rgb(80 203 38 / var(--tw-text-opacity));
+}
+
+.text-economia {
+  --tw-text-opacity: 1;
+  color: rgb(0 174 101 / var(--tw-text-opacity));
 }
 
 .text-gray-100 {
@@ -1351,11 +1372,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
-}
-
-.text-economia {
-  --tw-text-opacity: 1;
-  color: rgb(0 174 101 / var(--tw-text-opacity));
 }
 
 .placeholder-gray-300::-moz-placeholder {
@@ -1498,6 +1514,34 @@ p {
   font-family: var(--font-manrope), sans-serif;
 }
 
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.news h4 {
+  transition: all 0.2s ease-in-out;
+  font-size: .875rem;
+  color: #070707;
+  line-height: 150%;
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 600;
+}
+
+.news p {
+  transition: all 0.2s ease-in-out;
+  color: #6D6D6D ;
+  font-size: 1rem;
+  line-height: 150%;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.news:hover p, .news:hover h4 {
+  color: #FF702E;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -1625,11 +1669,6 @@ p {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(245 245 245 / var(--tw-text-opacity));
-}
-
-.hover\:text-orange-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 175 138 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
