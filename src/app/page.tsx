@@ -1,14 +1,16 @@
 import Button from '@/components/button'
-import BookBookmark from '../components/icons/book-bookmark'
-import CaretRight from '../components/icons/caret-right'
-import CaretLeft from '../components/icons/caret-left'
-import Banner from '../assets/banner.png'
+import BookBookmark from '@/components/icons/book-bookmark'
+import CaretRight from '@/components/icons/caret-right'
+import CaretLeft from '@/components/icons/caret-left'
+import Banner from '@/assets/banner.png'
 import Image from 'next/image'
 import { Edition } from '@/components/edition'
 import { BreakingNews } from '@/components/breaking-news'
 import Newspaper from '@/components/icons/newspaper'
 import BookmarksSimple from '@/components/icons/bookmark-simple'
 import { Notice } from '@/components/notice'
+import PenNib from '@/components/icons/pen-nib'
+import ColunistaImg from '@/assets/colunista.png'
 
 export default function Home() {
   const monthlyEditions = [
@@ -126,10 +128,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="w-full max-w-[1215px] mx-auto mt-8">
+      <div className="w-full max-w-[1215px] mx-auto mt-10">
         <BreakingNews />
 
-        <div className="w-full text-justiça flex justify-center items-center mt-16 h-[156px] bg-gray-400 rounded-lg">
+        <div className="w-full flex justify-center items-center mt-[72px] h-[156px] bg-gray-400 rounded-lg">
           ADS
         </div>
 
@@ -140,7 +142,7 @@ export default function Home() {
           </h2>
 
           <div className="flex items-start justify-between mt-8">
-            <div className="w-[800px] text-política">
+            <div className="w-[800px]">
               <Notice
                 category="mundo"
                 createdAt="2021-09-13T15:00:00.000Z"
@@ -160,7 +162,7 @@ export default function Home() {
                 title="Trump deve se apresentar hoje à Justiça"
               />
 
-              <div className="w-full bg-gray-500 h-[1px] text-brasil" />
+              <div className="w-full bg-gray-500 h-[1px]" />
 
               <div className="flex flex-col gap-4">
                 <Notice
@@ -183,7 +185,7 @@ export default function Home() {
         </section>
 
         <section className="w-full flex flex-col mt-8 gap-10">
-          <div className="grid grid-cols-3 gap-10 text-mundo">
+          <div className="grid grid-cols-3 gap-10">
             <Notice
               category="mundo"
               createdAt="2021-09-13T15:00:00.000Z"
@@ -221,41 +223,41 @@ export default function Home() {
               </header>
 
               <div className="flex flex-col">
-                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500 hover:text-orange-200">
                   <p className="text-orange-400">1</p>
 
-                  <p className="text-black font-semibold text-base">
+                  <p className="[&:not(:hover)]:text-black font-semibold text-base transition-colors duration-200">
                     Brasil teme nova crise de imigrantes no Acre após Chile e
                     Peru endurecerem contra imigrantes
                   </p>
                 </div>
-                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500 hover:text-orange-200">
                   <p className="text-orange-400">2</p>
 
-                  <p className="text-black font-semibold text-base">
+                  <p className="[&:not(:hover)]:text-black font-semibold text-base transition-colors duration-200">
                     Invasor que fez live na cadeira de Moraes é preso
                   </p>
                 </div>
-                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500 hover:text-orange-200">
                   <p className="text-orange-400">3</p>
 
-                  <p className="text-black font-semibold text-base">
+                  <p className="[&:not(:hover)]:text-black font-semibold text-base transition-colors duration-200">
                     Rosa Weber: como ministra acabou com farra dos pedidos de
                     vistas e foi contraponto a ministros políticos
                   </p>
                 </div>
-                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500">
+                <div className="flex items-start gap-4 pb-6 mb-6 border-b border-gray-500 hover:text-orange-200">
                   <p className="text-orange-400">4</p>
 
-                  <p className="text-black font-semibold text-base">
+                  <p className="[&:not(:hover)]:text-black font-semibold text-base transition-colors duration-200">
                     Oposição articula PEC que permitiria ao Congresso Nacional
                     barrar decisões do STF
                   </p>
                 </div>
-                <div className="flex items-start gap-4 pb-6 mb-6">
+                <div className="flex items-start gap-4 pb-6 mb-6 hover:text-orange-200">
                   <p className="text-orange-400">5</p>
 
-                  <p className="text-black font-semibold text-base">
+                  <p className="[&:not(:hover)]:text-black font-semibold text-base transition-colors duration-200">
                     Campos Neto pediu e Lula vai recebê-lo no Planalto pela
                     primeira vez
                   </p>
@@ -273,7 +275,107 @@ export default function Home() {
             />
           </div>
         </section>
+
+        <div className="w-full flex justify-center items-center my-24 h-[156px] bg-gray-400 rounded-lg">
+          ADS
+        </div>
       </div>
+      <section className="w-full bg-black h-[370px] py-20">
+        <div className="w-full max-w-[1215px] mx-auto">
+          <header className="flex justify-between items-center mb-8">
+            <h2 className="text-[32px] flex items-center gap-2 font-ptserif font-bold text-white">
+              <PenNib size={32} weight="fill" className="text-orange-200" />
+              Colunistas
+            </h2>
+
+            <Button
+              variant="tertiary"
+              className="flex items-center gap-[10px] text-white"
+            >
+              Ver todos
+              <CaretRight size={16} className="text-orange-200" weight="bold" />
+            </Button>
+          </header>
+
+          <div className="w-full grid grid-cols-3 gap-10">
+            <div className="w-wull flex gap-6 items-center">
+              <Image
+                src={ColunistaImg}
+                alt="Colunista"
+                width={72}
+                height={72}
+                quality={100}
+              />
+
+              <div className="flex flex-col gap-1">
+                <h2 className="text-lg text-orange-200">Fernanda Silva</h2>
+                <p className="text-sm text-gray-700">
+                  A participação desastrosa do general Heleno na CPI do 8 de
+                  Janeiro
+                </p>
+              </div>
+            </div>
+            <div className="w-wull flex gap-6 items-center">
+              <Image
+                src={ColunistaImg}
+                alt="Colunista"
+                width={72}
+                height={72}
+                quality={100}
+              />
+
+              <div className="flex flex-col gap-1">
+                <h2 className="text-lg text-orange-200">Fernanda Silva</h2>
+                <p className="text-sm text-gray-700">
+                  A participação desastrosa do general Heleno na CPI do 8 de
+                  Janeiro
+                </p>
+              </div>
+            </div>
+            <div className="w-wull flex gap-6 items-center">
+              <Image
+                src={ColunistaImg}
+                alt="Colunista"
+                width={72}
+                height={72}
+                quality={100}
+              />
+
+              <div className="flex flex-col gap-1">
+                <h2 className="text-lg text-orange-200">Fernanda Silva</h2>
+                <p className="text-sm text-gray-700">
+                  A participação desastrosa do general Heleno na CPI do 8 de
+                  Janeiro
+                </p>
+              </div>
+            </div>
+          </div>
+          <footer className="w-full flex justify-between items-center mt-8">
+            <div className="flex gap-2 items-center">
+              <button className="w-10 h-[2px] bg-orange-200" />
+              <button className="w-10 h-[2px] bg-gray-200" />
+              <button className="w-10 h-[2px] bg-gray-200" />
+            </div>
+
+            <div className="flex items-center gap-3">
+              <button>
+                <CaretLeft
+                  size={24}
+                  weight="bold"
+                  className="text-gray-200 transition-all duration-200 hover:text-orange-200"
+                />
+              </button>
+              <button>
+                <CaretRight
+                  size={24}
+                  weight="bold"
+                  className="text-gray-700 transition-all duration-200 hover:text-orange-200"
+                />
+              </button>
+            </div>
+          </footer>
+        </div>
+      </section>
     </main>
   )
 }

@@ -32,13 +32,33 @@ export function Notice({
     }
   }
 
+  let perCategory = ''
+
+  switch (category) {
+    case 'política':
+      perCategory = 'bg-política text-política'
+      break
+    case 'economia':
+      perCategory = 'bg-economia text-economia'
+      break
+    case 'brasil':
+      perCategory = 'bg-brasil text-brasil'
+      break
+    case 'justiça':
+      perCategory = 'bg-justiça text-justiça'
+      break
+    case 'mundo':
+      perCategory = 'bg-mundo text-mundo'
+      break
+  }
+
   return (
     <>
       {size === 'small' ? (
         <div className="flex gap-5 w-[380px] cursor-pointer">
           <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
             IMAGEM
-            <div className={`absolute bottom-0 h-1 w-full bg-${category}`} />
+            <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
           </div>
 
           <div className="w-[calc(100%-116px)] flex flex-col gap-3">
@@ -47,7 +67,7 @@ export function Notice({
             >
               {category}
               <span
-                className={`inline-block w-[6px] h-[6px] bg-${category} rounded-full ml-2 mr-2`}
+                className={`inline-block w-[6px] h-[6px] ${perCategory} rounded-full ml-2 mr-2`}
               ></span>
               <span className="text-gray-200 font-normal">
                 {formatDate(createdAt)}
@@ -69,7 +89,7 @@ export function Notice({
             }] bg-gray-100 rounded-lg flex items-center justify-center`}
           >
             Imagem
-            <div className={`absolute bottom-0 h-1 w-full bg-${category}`} />
+            <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
           </div>
 
           <div className="flex flex-col gap-2">
@@ -78,7 +98,7 @@ export function Notice({
             >
               {category}
               <span
-                className={`inline-block w-[6px] h-[6px] bg-${category} rounded-full ml-2 mr-2`}
+                className={`inline-block w-[6px] h-[6px] ${perCategory} rounded-full ml-2 mr-2`}
               ></span>
               <span className="text-gray-200 font-normal">
                 {formatDate(createdAt)}
