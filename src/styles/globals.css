@@ -75,7 +75,7 @@ p {
 }
 
 .news h4 {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   font-size: .875rem;
   font-weight: 600;
   color: #070707;
@@ -85,7 +85,7 @@ p {
 }
 
 .news p {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
   color: #6D6D6D ;
   font-size: 1rem;
   line-height: 150%;

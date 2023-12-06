@@ -17,7 +17,7 @@ export function Exato() {
       </p>
 
       {openExato && (
-        <div className="w-[160px] h-[105px] py-2 px-[20px] top-6 rounded-lg shadow-md absolute bg-[#FFF]">
+        <div className="w-[160px] h-[105px] py-2 px-[20px] top-6 rounded-lg shadow-exato absolute bg-[#FFF]">
           <ul className="flex flex-col list-none">
             <li className="py-[10px]">
               <Link

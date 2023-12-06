@@ -5,6 +5,7 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/screens/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -13,6 +14,9 @@ const config: Config = {
       fontFamily: {
         manrope: ['var(--font-manrope)'],
         ptserif: ['var(--font-ptserif)'],
+      },
+      boxShadow: {
+        exato: '0px 10px 22px -4px rgba(0, 0, 0, 0.08)',
       },
       backgroundColor: { ...defaultTheme },
       textColor: { ...defaultTheme },
