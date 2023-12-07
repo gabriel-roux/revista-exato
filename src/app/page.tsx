@@ -12,6 +12,10 @@ import CategoriesNews from '@/screens/home/categories-news'
 import Opniao from '@/screens/home/opniao'
 import Podcasts from '@/screens/home/podcast'
 import Videos from '@/screens/home/videos'
+import { Galeria } from '@/screens/home/galeria'
+import Parceiros from '@/screens/home/parceiros'
+import Livraria from '@/screens/home/livros'
+import { Newsletter } from '@/screens/home/newsletter'
 
 export default function Home() {
   const monthlyEditions = [
@@ -141,6 +145,14 @@ export default function Home() {
       <Podcasts />
 
       <Videos />
+
+      <Galeria />
+
+      <Parceiros />
+
+      <Livraria />
+
+      <Newsletter />
     </main>
   )
 }

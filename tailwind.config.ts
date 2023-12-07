@@ -17,6 +17,7 @@ const config: Config = {
       },
       boxShadow: {
         exato: '0px 10px 22px -4px rgba(0, 0, 0, 0.08)',
+        input: '0px 0px 1px 2px #FF702E95',
       },
       backgroundColor: { ...defaultTheme },
       textColor: { ...defaultTheme },
