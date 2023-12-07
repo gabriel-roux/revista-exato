@@ -18,11 +18,11 @@ export function Livro() {
 
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-[6px]">
-          <Star size={24} className="text-orange-200" />
-          <Star size={24} className="text-orange-200" />
-          <Star size={24} className="text-orange-200" />
-          <Star size={24} className="text-orange-200" />
-          <Star size={24} className="text-orange-500" />
+          <Star weight="fill" size={24} className="text-orange-200" />
+          <Star weight="fill" size={24} className="text-orange-200" />
+          <Star weight="fill" size={24} className="text-orange-200" />
+          <Star weight="fill" size={24} className="text-orange-200" />
+          <Star weight="fill" size={24} className="text-orange-500" />
         </div>
 
         <small className="text-sm text-gray-400 font-normal">(22)</small>
