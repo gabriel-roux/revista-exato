@@ -29,7 +29,6 @@ export function Galeria() {
         <div className="pointer-events-none absolute z-10 left-0 w-[370px] h-[460px] bg-gradient-to-r from-black to-black/0" />
         <div className="pointer-events-none absolute z-10 right-0 w-[370px] h-[460px] bg-gradient-to-l from-black to-black/0" />
         <ImagesGalery />
-        <div className="mt-4"></div>
       </div>
     </section>
   )

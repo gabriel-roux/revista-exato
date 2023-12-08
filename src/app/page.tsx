@@ -16,6 +16,7 @@ import { Galeria } from '@/screens/home/galeria'
 import Parceiros from '@/screens/home/parceiros'
 import Livraria from '@/screens/home/livros'
 import { Newsletter } from '@/screens/home/newsletter'
+import Comunidade from '@/screens/home/comunidade'
 
 export default function Home() {
   const monthlyEditions = [
@@ -153,6 +154,8 @@ export default function Home() {
       <Livraria />
 
       <Newsletter />
+
+      <Comunidade />
     </main>
   )
 }
