@@ -1,10 +1,8 @@
 import Button from '@/components/button'
 import BookBookmark from '@/components/icons/book-bookmark'
 import CaretRight from '@/components/icons/caret-right'
-import CaretLeft from '@/components/icons/caret-left'
 import Banner from '@/assets/banner.png'
 import Image from 'next/image'
-import { Edition } from '@/components/edition'
 
 import LastNews from '@/screens/home/last-news'
 import Colunistas from '@/screens/home/colunistas'
@@ -17,41 +15,9 @@ import Parceiros from '@/screens/home/parceiros'
 import Livraria from '@/screens/home/livros'
 import { Newsletter } from '@/screens/home/newsletter'
 import Comunidade from '@/screens/home/comunidade'
+import EditionCarousel from '@/screens/home/main-carousel'
 
 export default function Home() {
-  const monthlyEditions = [
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: true,
-    },
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: false,
-    },
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: false,
-    },
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: false,
-    },
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: false,
-    },
-    {
-      title: 'Capa',
-      desc: 'Trump deve se apresentar hoje à Justiça, lorem ipsum sit dolor.',
-      isFree: false,
-    },
-  ]
-
   return (
     <main>
       <section className="w-full border-y-2 border-orange-200 h-[506px] py-[56px] bg-black">
@@ -91,46 +57,10 @@ export default function Home() {
                   background:
                     'radial-gradient(100% 50.41% at 0% 48.27%, rgba(242, 77, 0, 0.70) 0%, rgba(242, 77, 0, 0.00) 100%)',
                 }}
-                className="absolute w-[80px] h-[320px] transform -rotate-90 -bottom-[51%] left-[35%] "
+                className="absolute z-10 w-[80px] h-[320px] transform -rotate-90 -bottom-[51%] left-[35%] "
               />
             </div>
-            <div className="h-[325px] w-[calc(100%-300px)] flex flex-col gap-10">
-              <div className="grid grid-cols-3 h-[258px]">
-                {monthlyEditions.map((edition, index) => (
-                  <Edition
-                    key={index}
-                    title={edition.title}
-                    desc={edition.desc}
-                    isFree={edition.isFree}
-                  />
-                ))}
-              </div>
-
-              <footer className="flex justify-between items-center">
-                <div className="flex gap-2 items-center">
-                  <button className="w-10 h-[2px] bg-orange-200" />
-                  <button className="w-10 h-[2px] bg-gray-200" />
-                  <button className="w-10 h-[2px] bg-gray-200" />
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <button>
-                    <CaretLeft
-                      size={24}
-                      weight="bold"
-                      className="text-gray-200 transition-all duration-200 hover:text-orange-200"
-                    />
-                  </button>
-                  <button>
-                    <CaretRight
-                      size={24}
-                      weight="bold"
-                      className="text-gray-700 transition-all duration-200 hover:text-orange-200"
-                    />
-                  </button>
-                </div>
-              </footer>
-            </div>
+            <EditionCarousel />
           </div>
         </div>
       </section>

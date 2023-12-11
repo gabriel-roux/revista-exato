@@ -55,7 +55,7 @@ export function Notice({
   return (
     <>
       {size === 'small' ? (
-        <div className="flex gap-5 w-[380px] cursor-pointer">
+        <div className="notice-card-small flex gap-5 w-[380px] cursor-pointer">
           <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
             IMAGEM
             <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
@@ -78,9 +78,9 @@ export function Notice({
         </div>
       ) : (
         <div
-          className={`w-[${
+          className={`notice-card-${size === 'large' ? 'large' : 'medium'} w-[${
             size === 'large' ? '800px' : '380px'
-          }] flex flex-col gap-4 cursor-pointer`}
+          }] flex flex-col gap-4 cursor-pointer `}
         >
           <div
             style={{ height: size === 'large' ? '470px' : '220px' }}

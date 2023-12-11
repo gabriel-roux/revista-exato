@@ -95,3 +95,21 @@ p {
 .news:hover p, .news:hover h4 {
   color: #FF702E;
 }
+
+.notice-card-small h2,
+.notice-card-small p,
+.notice-card-medium h2,
+.notice-card-medium p,
+.notice-card-large h2,
+.notice-card-large p {
+  transition: color 0.5s ease;
+}
+
+.notice-card-small:hover h2,
+.notice-card-small:hover p,
+.notice-card-medium:hover h2,
+.notice-card-medium:hover p,
+.notice-card-large:hover h2,
+.notice-card-large:hover p {
+  color: #6D6D6D;
+}

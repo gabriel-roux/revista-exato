@@ -109,8 +109,6 @@ export function ImagesGalery() {
             image={image.image}
             title={image.title}
             description={image.description}
-            handlePrevImage={prevImage}
-            handleNextImage={nextImage}
             handleSelectImage={(id: number) => setSelectedImage(id)}
             selectedImage={selectedImage}
           />
