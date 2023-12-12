@@ -113,3 +113,12 @@ p {
 .notice-card-large:hover p {
   color: #6D6D6D;
 }
+
+.cupom-button:hover {
+  width: 120px;
+}
+
+.cupom-button:hover img {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(3px) scale(1.08);
+}

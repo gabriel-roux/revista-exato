@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import AmbevImg from '../../assets/ambev.png'
+import { VerCupom } from './ver-cupom-'
 
 export function Parceiro() {
   return (
@@ -19,9 +20,7 @@ export function Parceiro() {
             <h3 className="text-orange-200 text-lg font-semibold">15% OFF</h3>
           </div>
 
-          <button className="w-[180px] rounded-lg bg-orange-200 hover:bg-orange-300 transition-all duration-200 h-[44px] flex justify-center items-center text-gray-600 font-manrope text-base">
-            Ver Cupom
-          </button>
+          <VerCupom codigo="EXATO15" />
         </header>
 
         <p className="text-sm text-gray-200 font-normal">
