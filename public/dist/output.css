@@ -1546,24 +1546,6 @@ video {
   --tw-gradient-from-position: 90%;
 }
 
-.from-\[50\%\] {
-  --tw-gradient-from-position: 50%;
-}
-
-.from-\[70\%\] {
-  --tw-gradient-from-position: 70%;
-}
-
-.via-black\/50 {
-  --tw-gradient-to: rgb(7 7 7 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(7 7 7 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-black\/0 {
-  --tw-gradient-to: rgb(7 7 7 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(7 7 7 / 0) var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
 .to-black\/0 {
   --tw-gradient-to: rgb(7 7 7 / 0) var(--tw-gradient-to-position);
 }
@@ -2196,14 +2178,14 @@ p {
   transition-duration: 150ms;
 }
 
-.after\:duration-\[400ms\]::after {
-  content: var(--tw-content);
-  transition-duration: 400ms;
-}
-
 .after\:duration-\[300ms\]::after {
   content: var(--tw-content);
   transition-duration: 300ms;
+}
+
+.after\:duration-\[400ms\]::after {
+  content: var(--tw-content);
+  transition-duration: 400ms;
 }
 
 .after\:duration-\[500ms\]::after {

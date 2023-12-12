@@ -31,7 +31,7 @@ export function SearchSection() {
         <ExatoLogo
           className={
             focused
-              ? 'w-[145px] h-[50px] transform translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
+              ? 'w-[150px] h-[50px] transform translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
               : 'transition-all duration-[800ms] ease w-[145px] h-[50px] fill-[#070707] hover:fill-orange-200'
           }
         />
