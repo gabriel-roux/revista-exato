@@ -210,7 +210,7 @@ export function Footer() {
                 <FacebookLogo size={24} weight="fill" />
               </button>
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
-                <TwitterLogo size={24} weight="fill" />
+                <TwitterLogo />
               </button>
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
                 <YoutubeLogo size={24} weight="fill" />
