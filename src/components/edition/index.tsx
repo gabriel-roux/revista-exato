@@ -26,8 +26,8 @@ export function Edition({ title, desc, isFree }: EditionProps) {
           <span
             className={`absolute rounded-l-md w-[35px] h-[38px] bg-gray-100 ${
               isHover
-                ? 'bg-orange-200 rounded-l-none w-[84px] after:content-[""] after:absolute after:border-t-[19px] after:border-b-[19px] after:border-l-[19px] after:border-t-orange-200 after:border-b-orange-200 after:border-l-[transparent] after:top-1/2 after:-translate-y-1/2 after:left-[-18px] after:transition-all ease after:duration-[400ms]'
-                : 'after:opacity-0'
+                ? 'bg-orange-200 rounded-l-none w-[84px] after:content-[""] after:absolute after:border-t-[19px] after:border-b-[19px] after:border-l-[19px] after:border-t-orange-200 after:border-b-orange-200 after:border-l-[transparent] after:top-1/2 after:-translate-y-1/2 after:left-[-18px] after:transition-all after:ease after:duration-[300ms]'
+                : 'after:opacity-0 after:transition-opacity after:ease after:duration-[500ms]'
             } flex items-center justify-center gap-1 right-0 transition-all duration-500`}
           >
             <LockKeyOpen />

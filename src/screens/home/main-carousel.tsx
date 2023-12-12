@@ -150,7 +150,7 @@ export default function EditionCarousel() {
         </footer>
       </div>
       <div className="w-[33%] h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
-      <div className="w-[320px] h-[366px] bg-gradient-to-l from-black from-[90%] to-black/0 absolute right-0" />
+      <div className="w-[320px] h-[366px] bg-gradient-to-l from-black  from-[70%] to-black/0 absolute right-0" />
     </>
   )
 }
