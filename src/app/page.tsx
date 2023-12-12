@@ -19,7 +19,7 @@ import EditionCarousel from '@/screens/home/main-carousel'
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden max-w-[100vw]">
       <section className="w-full border-y-2 border-orange-200 h-[506px] py-[56px] bg-black">
         <div className="w-full mx-auto max-w-[1215px] flex flex-col gap-8">
           <header className="flex justify-between items-center">
