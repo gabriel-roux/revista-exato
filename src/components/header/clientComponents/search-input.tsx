@@ -21,8 +21,10 @@ export function SearchSection() {
           <input
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            placeholder="Buscar"
-            className="w-[120px] h-[48px] text-gray-300 placeholder-gray-300 font-manrope text-base focus:outline-none"
+            placeholder={focused ? 'Digite aqui sua busca' : 'Buscar'}
+            className={`${
+              focused ? 'w-[200px]' : 'w-[120px]'
+            } h-[48px] text-gray-300 placeholder-gray-300 font-manrope text-base focus:outline-none`}
           />
         </div>
 

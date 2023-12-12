@@ -42,7 +42,7 @@ export function DropDown({ menu, items }: DropDownProps) {
       {open && (
         <div className="absolute z-[100] left-0 bg-[white] border-b-2 border-orange-200 w-full mt-4 h-[230px]">
           <div className="max-w-[1216px] mx-auto p-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {items.map((item, index) => (
                 <Link
                   key={index}

@@ -85,12 +85,11 @@ export function BreakingNews() {
     <div className="w-full h-[75px] rounded-t-[12px] rounded-r-[12px] bg-gray-700 relative">
       <div className="w-full h-full flex items-center justify-between px-[20px] gap-[40px]">
         <div className="flex items-center gap-[40px]">
-          <Image
-            src={BreakingNewsLogo}
-            alt="Breaking News"
-            width={110}
-            height={50}
-          />
+          <h2 className="text-orange-200 tracking-[-2%] text-right font-normal font-s font-manrope text-[24px] leading-6">
+            BREAKING <br />
+            <span className=" font-extrabold">NEWS</span>
+          </h2>
+
           <h2 className="text-black font-medium text-sm">
             {news[currentIndex].legend}
           </h2>

@@ -2,7 +2,7 @@
 
 import { differenceInDays, differenceInHours, format, parseISO } from 'date-fns'
 import { useState } from 'react'
-import Lock from '../icons/lock'
+import LockKeyOpen from '../icons/lock'
 
 interface SugestionProps {
   name: string
@@ -49,11 +49,11 @@ export default function Sugestion({
           <span
             className={`absolute rounded-l-md w-[35px] h-[38px] bg-gray-100 ${
               isHover
-                ? 'bg-orange-200 rounded-l-none w-[84px] after:content-[""] after:absolute after:border-t-[19px] after:border-b-[19px] after:border-l-[19px] after:border-t-orange-200 after:border-b-orange-200 after:border-l-[transparent] after:top-1/2 after:-translate-y-1/2 after:left-[-18px] after:transition-all after:duration-300'
-                : 'after:border-t-[0px] after:border-b-[0px] after:opacity-0'
+                ? 'bg-orange-200 rounded-l-none w-[84px] after:content-[""] after:absolute after:border-t-[19px] after:border-b-[19px] after:border-l-[19px] after:border-t-orange-200 after:border-b-orange-200 after:border-l-[transparent] after:top-1/2 after:-translate-y-1/2 after:left-[-18px] after:transition-all ease after:duration-[400ms]'
+                : 'after:opacity-0'
             } flex items-center justify-center gap-1 right-0 transition-all duration-500`}
           >
-            <Lock size={16} className="text-gray-500" weight="fill" />
+            <LockKeyOpen />
             {
               <span
                 className={`text-sm font-semibold ${

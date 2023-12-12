@@ -174,7 +174,7 @@ export default function OpniaoCarousel() {
         </footer>
       </div>
       <div className="w-[50%] pointer-events-none h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
-      <div className="w-[200px] pointer-events-none h-[366px] bg-gradient-to-l from-black to-black/0 absolute right-0" />
+      <div className="w-[320px] pointer-events-none h-[366px] bg-gradient-to-l from-black from-[80%] to-black/0 absolute right-0" />
     </>
   )
 }

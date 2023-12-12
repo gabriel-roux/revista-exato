@@ -12,6 +12,13 @@ export function ImagesGalery() {
 
   const images = [
     {
+      id: 0,
+      image:
+        'https://images.unsplash.com/photo-1634561005916-7a4a9d4c8e7d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfHl5ZWFyfGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80',
+      title: 'Titulo 1',
+      description: 'Descrição 1',
+    },
+    {
       id: 1,
       image:
         'https://images.unsplash.com/photo-1634561005916-7a4a9d4c8e7d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfHl5ZWFyfGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80',
@@ -60,30 +67,21 @@ export function ImagesGalery() {
       title: 'Titulo 4',
       description: 'Descrição 4',
     },
-    {
-      id: 8,
-      image:
-        'https://images.unsplash.com/photo-1634561005916-7a4a9d4c8e7d?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfHl5ZWFyfGVufDB8fHx8&ixlib=rb-1.2.1&w=1000&q=80',
-      title: 'Titulo 4',
-      description: 'Descrição 4',
-    },
   ]
 
   const prevImage = () => {
-    console.log(selectedImage)
-    setSelectedImage((current) => current - 1)
+    setSelectedImage(selectedImage - 1)
   }
 
   const nextImage = () => {
-    console.log(selectedImage)
-    setSelectedImage((current) => current + 1)
+    setSelectedImage(selectedImage + 1)
   }
 
   const calcCarouselPosition = () => {
     const imageWidth = 190 // Largura da imagem não selecionada
     const selectedImageWidth = 800 // Largura da imagem selecionada
 
-    let offset = selectedImage >= 5 ? 220 : 150
+    let offset = selectedImage === 0 ? 305 : selectedImage >= 5 ? 420 : 350
     // Calculando o deslocamento até a imagem selecionada
     for (let i = 0; i < selectedImage; i++) {
       offset += imageWidth
@@ -93,6 +91,17 @@ export function ImagesGalery() {
     const centerOffset = (selectedImageWidth - imageWidth) / 2
     return `translateX(calc(50% - ${offset}px - ${centerOffset}px))`
   }
+
+  const paginationDots = Array.from({ length: images.length }, (_, index) => (
+    <button
+      key={index}
+      className={`w-10 h-[2px] transition-all duration-200 ${
+        selectedImage === index ? 'bg-orange-200' : 'bg-gray-200'
+      }`}
+      onClick={() => setSelectedImage(index)}
+    />
+  ))
+
   return (
     <div className="w-full absolute left-0 overflow-hidden">
       <div
@@ -152,15 +161,14 @@ export function ImagesGalery() {
         </div>
 
         <div className="flex justify-between items-center">
-          <div className="flex gap-2 items-center">
-            <button className="w-10 h-[2px] bg-orange-200" />
-            <button className="w-10 h-[2px] bg-gray-200" />
-            <button className="w-10 h-[2px] bg-gray-200" />
-            <button className="w-10 h-[2px] bg-gray-200" />
-          </div>
+          <div className="flex gap-2 items-center">{paginationDots}</div>
 
           <div className="flex items-center gap-3">
-            <button>
+            <button
+              disabled={selectedImage === 0}
+              onClick={prevImage}
+              className="disabled:opacity-50"
+            >
               <CaretLeft
                 size={24}
                 onClick={prevImage}
@@ -168,7 +176,11 @@ export function ImagesGalery() {
                 className="text-gray-200 transition-all duration-200 hover:text-orange-200"
               />
             </button>
-            <button>
+            <button
+              disabled={selectedImage === images.length}
+              onClick={nextImage}
+              className="disabled:opacity-50"
+            >
               <CaretRight
                 size={24}
                 onClick={nextImage}
