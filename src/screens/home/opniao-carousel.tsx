@@ -95,7 +95,7 @@ export default function OpniaoCarousel() {
   const [currentPage, setCurrentPage] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
   const itemWidth = 332 // Largura de cada item do carrossel
-  const itemsPerPage = 2 // Quantos itens devem ser passados por vez
+  const itemsPerPage = 1 // Quantos itens devem ser passados por vez
 
   const moveCarouselTo = (page: number) => {
     setCurrentPage(page)
@@ -121,7 +121,7 @@ export default function OpniaoCarousel() {
     })
   }
 
-  const itemsPerSlide = 4 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
+  const itemsPerSlide = 2 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
   const maxPage = Math.ceil(opnioes.length / itemsPerSlide) - 1
 
   const paginationDots = Array.from({ length: maxPage + 1 }, (_, index) => (

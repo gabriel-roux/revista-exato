@@ -31,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className={`${manrope.variable} ${ptserif.variable}`}>
         {children}
+        <div id="modal-root"></div>
       </body>
     </html>
   )

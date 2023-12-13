@@ -41,10 +41,10 @@ export function FooterModal() {
           <ul
             className={`flex flex-col gap-4 mt-8 transition-all duration-300`}
           >
-            <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
+            {/* <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
               <Phone size={16} weight="fill" className="text-orange-200" />
               +1 (302) 217-3735
-            </li>
+            </li> */}
             <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
               <Envelope size={16} weight="fill" className="text-orange-200" />
               suporte@revistaexato.com

@@ -6,6 +6,7 @@ import Button from '../button'
 import Share from '../icons/share'
 import CaretRight from '@/components/icons/caret-right'
 import CaretLeft from '@/components/icons/caret-left'
+import { ShareModal } from './share'
 
 export function ImagesGalery() {
   const [selectedImage, setSelectedImage] = useState(1)
@@ -155,9 +156,7 @@ export function ImagesGalery() {
             </div>
           </div>
 
-          <Button variant="tertiary" className="px-[0!important]">
-            <Share weight="fill" size={24} className="text-orange-200" />
-          </Button>
+          <ShareModal />
         </div>
 
         <div className="flex justify-between items-center">

@@ -71,8 +71,8 @@ export default function EditionCarousel() {
 
   const [currentPage, setCurrentPage] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const itemWidth = 332 // Largura de cada item do carrossel
-  const itemsPerPage = 2 // Quantos itens devem ser passados por vez
+  const itemWidth = 360 // Largura de cada item do carrossel
+  const itemsPerPage = 1 // Quantos itens devem ser passados por vez
 
   const moveCarouselTo = (page: number) => {
     setCurrentPage(page)
@@ -98,7 +98,7 @@ export default function EditionCarousel() {
     })
   }
 
-  const itemsPerSlide = 4 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
+  const itemsPerSlide = 2 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
   const maxPage = Math.ceil(monthlyEditions.length / itemsPerSlide) - 1
 
   const paginationDots = Array.from({ length: maxPage + 1 }, (_, index) => (
@@ -150,7 +150,7 @@ export default function EditionCarousel() {
         </footer>
       </div>
       <div className="w-[33%] h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
-      <div className="w-[320px] h-[366px] bg-gradient-to-l from-black  from-[90%] to-black/0 absolute right-0" />
+      <div className="w-[320px] h-[366px] bg-gradient-to-l from-black/95 from-[50%] to-black/0 absolute right-0" />
     </>
   )
 }

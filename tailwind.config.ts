@@ -19,6 +19,9 @@ const config: Config = {
         exato: '0px 10px 22px -4px rgba(0, 0, 0, 0.08)',
         input: '0px 0px 1px 2px #FF702E95',
       },
+      screens: {
+        '3xl': '1920px',
+      },
       backgroundColor: { ...defaultTheme },
       textColor: { ...defaultTheme },
       borderColor: { ...defaultTheme },

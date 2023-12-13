@@ -6,6 +6,7 @@ import Image from 'next/image'
 import PauseCircle from '../icons/pause'
 import Button from '../button'
 import Share from '../icons/share'
+import { ShareModal } from './share'
 
 interface PodcastProps {
   openedPodcast: number
@@ -63,9 +64,7 @@ export default function Podcast({
               EXATOCAST
             </small>
 
-            <Button variant="tertiary" className="px-[0!important]">
-              <Share weight="fill" size={16} className="text-orange-200" />
-            </Button>
+            <ShareModal />
           </header>
 
           <p
