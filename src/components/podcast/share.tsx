@@ -105,7 +105,8 @@ export function ShareModal() {
       </ul>
     </div>
   )
-  const portalRoot = document.getElementById('modal-root')
+  const portalRoot =
+    typeof document !== undefined ? document.getElementById('modal-root') : null
 
   return (
     <div className="relative">
