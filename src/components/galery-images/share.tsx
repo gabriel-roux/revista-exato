@@ -52,30 +52,20 @@ export function ShareModal() {
       className="w-[220px] z-50 py-2 px-[20px] rounded-lg shadow-exato absolute bg-[#FFF]"
     >
       <ul className="flex flex-col list-none">
-        <li className="cursor-pointer py-[10px] flex gap-[6px] items-center">
-          <WhatsappLogo
-            size={24}
-            className="text-orange-200 transform -translate-x-1"
-          />
+        <li className="cursor-pointer py-[10px] flex gap-[10px] items-center">
+          <WhatsappLogo className="fill-orange-200 transform -translate-x-1" />
           <p className="text-black font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
             Whatsapp
           </p>
         </li>
-        <li className="cursor-pointer py-[10px] flex gap-[6px] items-center">
-          <FacebookLogo
-            size={24}
-            weight="fill"
-            className="text-orange-200 transform -translate-x-1"
-          />
+        <li className="cursor-pointer py-[10px] flex gap-[10px] items-center">
+          <FacebookLogo className="fill-orange-200 transform -translate-x-1" />
           <p className="text-black font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
             Facebook
           </p>
         </li>
-        <li className="cursor-pointer py-[10px] flex gap-[6px] items-center">
-          <InstagramLogo
-            size={24}
-            className="text-orange-200 transform -translate-x-1"
-          />
+        <li className="cursor-pointer py-[10px] flex gap-[10px] items-center">
+          <InstagramLogo className="fill-orange-200 transform -translate-x-1" />
           <p className="text-black font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
             Instagram
           </p>
@@ -92,12 +82,8 @@ export function ShareModal() {
             Linkedin
           </p>
         </li>
-        <li className="cursor-pointer py-[10px] flex gap-[5px] items-center">
-          <Envelope
-            size={24}
-            weight="fill"
-            className="text-orange-200 transform -translate-x-1"
-          />
+        <li className="cursor-pointer py-[10px] flex gap-[10px] items-center">
+          <Envelope className="fill-orange-200 transform -translate-x-1" />
           <p className="text-black font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
             Email
           </p>

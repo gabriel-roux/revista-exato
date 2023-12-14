@@ -11,6 +11,15 @@ export default function Livraria() {
           <h2 className="text-[32px] flex items-center gap-4 font-ptserif font-bold text-black">
             <Tag size={32} weight="fill" className="text-orange-200" />
             Livraria
+            <span className="w-[6px] h-[6px] bg-gray-400 rounded-full font-normal" />
+            <span
+              style={{
+                fontWeight: 400,
+              }}
+              className="text-gray-400"
+            >
+              Mais vendidos
+            </span>
           </h2>
           <Button variant="tertiary" className="flex items-center gap-[10px]">
             Ver todos

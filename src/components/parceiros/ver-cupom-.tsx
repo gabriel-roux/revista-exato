@@ -13,7 +13,7 @@ export function VerCupom({ codigo }: VerCupomProps) {
       <p className="text-gray-300 font-medium">{codigo}</p>
 
       <div className="absolute left-0">
-        <button className="w-[140px] cupom-button relative rounded-lg font-medium bg-orange-200 hover:bg-orange-300 transition-all duration-300 h-[44px] flex justify-center items-center text-gray-600 font-manrope text-base">
+        <button className="w-[140px] -ml-[1px] cupom-button relative rounded-lg font-medium bg-orange-200 hover:bg-orange-300 transition-all duration-300 h-[44px] flex justify-center items-center text-gray-600 font-manrope text-base">
           Ver Cupom
           <Image
             src={Rectangle}

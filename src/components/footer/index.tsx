@@ -204,16 +204,16 @@ export function Footer() {
 
             <div className="flex items-center gap-3">
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
-                <InstagramLogo size={24} weight="regular" />
+                <InstagramLogo className="fill-white" />
               </button>
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
-                <FacebookLogo size={24} weight="fill" />
+                <FacebookLogo className="fill-white" />
               </button>
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
                 <TwitterLogo className="fill-white" />
               </button>
               <button className="w-[40px] h-[40px] rounded-lg bg-orange-200 transition-all duration-200 flex items-center justify-center text-white hover:bg-orange-300">
-                <YoutubeLogo size={24} weight="fill" />
+                <YoutubeLogo className="fill-white" />
               </button>
             </div>
           </div>

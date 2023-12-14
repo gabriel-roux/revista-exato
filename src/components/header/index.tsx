@@ -1,10 +1,10 @@
-import CaretDown from '@/components/icons/caret-down'
 import Sun from '@/components/icons/sun'
 import Link from 'next/link'
 
 import { SearchSection } from './clientComponents/search-input'
 import { Navigation } from './navigation'
 import { Exato } from './modals/exato'
+import { WeatherModal } from './modals/weather'
 
 export function Header() {
   return (
@@ -43,10 +43,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-8">
-            <p className="font-manrope font-medium text-sm flex items-center gap-[6px] hover:text-orange-500 transition-all duration-150 cursor-pointer">
-              Brasil (PT BR) | Brasilia DF - 16°{' '}
-              <CaretDown size={14} weight="bold" />
-            </p>
+            <WeatherModal />
 
             <div className="w-[44px] h-[24px] rounded-[26px] bg-orange-300 flex items-center px-1">
               <Sun weight="fill" size={18} />

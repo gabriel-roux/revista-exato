@@ -20,7 +20,7 @@ export function Navigation() {
             href="/"
             className="text-sm font-manrope font-medium text-black transition-all duration-300 hover:text-orange-200"
           >
-            Opniões
+            Opiniões
           </Link>
           <Link
             href="/"
