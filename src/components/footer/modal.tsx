@@ -46,7 +46,7 @@ export function FooterModal() {
               +1 (302) 217-3735
             </li> */}
             <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
-              <Envelope className="text-orange-200" />
+              <Envelope className="fill-orange-200" />
               suporte@revistaexato.com
             </li>
             <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
