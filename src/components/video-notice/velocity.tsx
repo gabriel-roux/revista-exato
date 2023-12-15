@@ -7,6 +7,8 @@ export function Velocity() {
 
   const handleVelocity = () => {
     if (velocity === 1) {
+      setVelocity(1.5)
+    } else if (velocity === 1.5) {
       setVelocity(2)
     } else {
       setVelocity(1)

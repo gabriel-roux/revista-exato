@@ -99,7 +99,10 @@ export default function OpniaoCarousel() {
 
   const moveCarouselTo = (page: number) => {
     setCurrentPage(page)
-    const newTranslateX = page * (itemWidth * itemsPerPage)
+    const newTranslateX =
+      page >= maxPage
+        ? page * (itemWidth * itemsPerPage) - 50
+        : page * (itemWidth * itemsPerPage)
     if (carouselRef.current) {
       carouselRef.current.style.transform = `translateX(-${newTranslateX}px)`
     }

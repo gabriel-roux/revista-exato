@@ -2,6 +2,7 @@ import { BreakingNews } from '@/components/breaking-news'
 import { Notice } from '@/components/notice'
 import Newspaper from '@/components/icons/newspaper'
 import BookmarksSimple from '@/components/icons/bookmark-simple'
+import LiveNotice from '@/components/live'
 
 export default function LastNews() {
   return (
@@ -63,13 +64,7 @@ export default function LastNews() {
 
       <section className="w-full flex flex-col mt-8 gap-10">
         <div className="grid grid-cols-3 gap-10">
-          <Notice
-            category="mundo"
-            createdAt="2021-09-13T15:00:00.000Z"
-            image=""
-            size="medium"
-            title="Trump deve se apresentar hoje à Justiça"
-          />
+          <LiveNotice />
           <Notice
             category="política"
             createdAt="2021-09-13T15:00:00.000Z"

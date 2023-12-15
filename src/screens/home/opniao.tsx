@@ -34,7 +34,7 @@ export default function Opniao() {
               width={266}
               height={166}
               quality={100}
-              className="absolute top-0 ml-[-140px]"
+              className="absolute top-0 ml-[-140px] pointer-events-none"
             />
           </div>
         </header>

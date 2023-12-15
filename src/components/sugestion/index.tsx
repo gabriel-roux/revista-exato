@@ -38,7 +38,7 @@ export default function Sugestion({
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-[325px] relative px-8 py-6 flex flex-col gap-3 transition-all rounded-lg hover:bg-gray-100 duration-200 border border-gray-100"
+      className="w-[325px] relative px-8 py-6 flex flex-col gap-3 transition-all rounded-lg hover:bg-[#262626] duration-200 border border-gray-100"
     >
       <header className="flex items-center justify-between">
         <small className="text-sm text-gray-300 font-medium">

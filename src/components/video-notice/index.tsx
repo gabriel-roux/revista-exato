@@ -56,7 +56,7 @@ export function VideoNotice({
   return (
     <>
       {size === 'small' ? (
-        <div className="flex gap-5 w-[380px] cursor-pointer">
+        <div className="flex notice-card-small gap-5 w-[380px] cursor-pointer">
           <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
             IMAGEM
             <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
@@ -78,7 +78,9 @@ export function VideoNotice({
           </div>
         </div>
       ) : size === 'medium' ? (
-        <div className={`w-[380px] flex flex-col gap-4 cursor-pointer`}>
+        <div
+          className={`notice-card-medium w-[380px] flex flex-col gap-4 cursor-pointer`}
+        >
           <div>
             <div
               className={`w-full relative overflow-hidden h-[220px] bg-gray-100 rounded-lg flex items-center justify-center`}
@@ -128,7 +130,7 @@ export function VideoNotice({
           </div>
         </div>
       ) : (
-        <div className={`w-full flex justify-between gap-8`}>
+        <div className={`w-full notice-card-large flex justify-between gap-8`}>
           <div className="min-w-[800px] h-[510px]">
             <div
               className={`w-full max-w-[800px] relative overflow-hidden h-[460px] bg-gray-100 rounded-lg flex items-center justify-center`}
