@@ -136,7 +136,7 @@ export function WeatherModal() {
 
     if (value.length > 0) {
       fetch(
-        `http://api.weatherapi.com/v1/search.json?key=419f61a8f1a14b519d7194158231412&q=${value}`,
+        `https://api.weatherapi.com/v1/search.json?key=419f61a8f1a14b519d7194158231412&q=${value}`,
       )
         .then((response) => response.json())
         .then((result: AutoCompleteProps[]) => {
@@ -148,7 +148,7 @@ export function WeatherModal() {
 
   useEffect(() => {
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=Brasilia`,
+      `https://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=Brasilia`,
     )
       .then((response) => response.json())
       .then((result: WeatherProps) => {
