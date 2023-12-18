@@ -39,7 +39,7 @@ export function FooterModal() {
             className={`w-[145px] h-[50px] transition-all fill-[#FFF] hover:fill-orange-200 duration-300 ease`}
           />
           <ul
-            className={`flex flex-col gap-4 mt-8 transition-all duration-300`}
+            className={`flex flex-col gap-3 mt-8 transition-all duration-300`}
           >
             {/* <li className="text-xs text-white font-normal transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
               <Phone size={16} weight="fill" className="text-orange-200" />
@@ -66,7 +66,7 @@ export function FooterModal() {
           {categories.map((category) => (
             <div
               key={category.category}
-              className="flex flex-col gap-4 w-[150px]"
+              className="flex flex-col gap-3 w-[150px]"
             >
               <h4 className="text-sm text-white font-semibold">
                 {category.category}

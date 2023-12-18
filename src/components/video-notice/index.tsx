@@ -79,7 +79,7 @@ export function VideoNotice({
         </div>
       ) : size === 'medium' ? (
         <div
-          className={`notice-card-medium w-[380px] flex flex-col gap-4 cursor-pointer`}
+          className={`notice-card-medium w-full md:w-[380px] flex flex-col gap-4 cursor-pointer`}
         >
           <div>
             <div
@@ -130,10 +130,12 @@ export function VideoNotice({
           </div>
         </div>
       ) : (
-        <div className={`w-full notice-card-large flex justify-between gap-8`}>
-          <div className="min-w-[800px] h-[510px]">
+        <div
+          className={`w-full notice-card-large flex flex-col md:flex-row md:justify-between md:gap-8`}
+        >
+          <div className="w-full md:min-w-[800px] md:h-[510px]">
             <div
-              className={`w-full max-w-[800px] relative overflow-hidden h-[460px] bg-gray-100 rounded-lg flex items-center justify-center`}
+              className={`w-full md:max-w-[800px] relative overflow-hidden h-[210px] md:h-[460px] bg-gray-100 rounded-lg flex items-center justify-center`}
             >
               Imagem
             </div>
@@ -177,9 +179,13 @@ export function VideoNotice({
                 {formatDate(createdAt)}
               </span>
             </small>
-            <h2 className={`text-black font-semibold text-[32px]`}>{title}</h2>
+            <h2 className={`text-black font-semibold text-lg md:text-[32px]`}>
+              {title}
+            </h2>
             {description && (
-              <p className="text-gray-200 text-base">{description}</p>
+              <p className="text-gray-200 text-sm md:text-base">
+                {description}
+              </p>
             )}
           </div>
         </div>

@@ -117,24 +117,35 @@ export default function ColunistasCarousel() {
         className="w-full grid grid-flow-col gap-10 transition-all duration-700 ease"
       >
         {coluninstas.map((coluninsta, index) => (
-          <div key={index} className="w-[378px] flex gap-6 items-center">
-            <Image
-              src={ColunistaImg}
-              alt="Colunista"
-              width={72}
-              height={72}
-              quality={100}
-            />
+          <div
+            key={index}
+            className="w-[268px] md:w-[378px] flex flex-col gap-6"
+          >
+            <div className="w-full flex gap-6 items-center">
+              <Image
+                src={ColunistaImg}
+                alt="Colunista"
+                width={72}
+                height={72}
+                quality={100}
+                className="flex-shrink-0"
+              />
 
-            <div className="flex flex-col gap-1">
-              <h2 className="text-lg text-orange-200">{coluninsta.name}</h2>
-              <p className="text-sm text-gray-700">{coluninsta.description}</p>
+              <div className="flex flex-col gap-1">
+                <h2 className="text-lg text-orange-200">{coluninsta.name}</h2>
+                <p className="hidden md:inline-block text-sm text-gray-700">
+                  {coluninsta.description}
+                </p>
+              </div>
             </div>
+            <p className="md:hidden text-sm text-gray-700">
+              {coluninsta.description}
+            </p>
           </div>
         ))}
       </div>
 
-      <footer className="w-full flex justify-between items-center mt-8">
+      <footer className="hidden w-full md:flex justify-between items-center mt-8">
         <div className="flex gap-2 items-center">{paginationDots}</div>
 
         <div className="flex items-center gap-3">

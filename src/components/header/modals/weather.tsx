@@ -13,6 +13,7 @@ import Fog from '@/assets/weather/fog.svg'
 import Snow from '@/assets/weather/snow.svg'
 import Rain from '@/assets/weather/rain.svg'
 import Lightning from '@/assets/weather/lightning.svg'
+import Brazil from '@/assets/brazil.svg'
 
 interface AutoCompleteProps {
   name: string
@@ -184,13 +185,12 @@ export function WeatherModal() {
       {openWeather && (
         <div
           ref={modalRef}
-          className="w-[320px] h-[60px] py-2 px-5 top-6 rounded-lg shadow-exato absolute bg-[#FFF]"
+          className="w-[395px] h-[60px] py-2 px-3 top-7 rounded-lg shadow-exato absolute bg-[#FFF]"
         >
           <div className="flex items-center gap-5 relative">
-            <p className="font-manrope text-black hover:text-orange-200 transition-all duration-200">
-              {weather.location.country === 'Brazil'
-                ? 'Brasil'
-                : weather.location.country}
+            <p className="flex items-center gap-1 font-manrope text-base text-black hover:text-orange-200 transition-all duration-200">
+              <Image src={Brazil} alt="" width={24} height={24} />
+              Brasil (PT BR)
             </p>
 
             <div

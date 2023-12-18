@@ -31,13 +31,13 @@ export function SearchSection() {
         <ExatoLogo
           className={
             focused
-              ? 'w-[150px] h-[50px] transform translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
+              ? 'w-[118px] h-10 md:w-[150px] md:h-[50px] transform translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
               : 'transition-all duration-[800ms] ease w-[145px] h-[50px] fill-[#070707] hover:fill-orange-200'
           }
         />
 
         <div
-          className={`flex items-center gap-2 transition-all duration-700 ease ${
+          className={`md:flex hidden items-center gap-2 transition-all duration-700 ease ${
             focused && 'transform translate-x-16 opacity-0'
           }`}
         >

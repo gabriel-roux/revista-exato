@@ -6,21 +6,21 @@ import LiveNotice from '@/components/live'
 
 export default function LastNews() {
   return (
-    <div className="w-full max-w-[1215px] mx-auto mt-10">
+    <div className="w-full md:max-w-[1215px] mx-auto md:mt-10">
       <BreakingNews />
 
-      <div className="w-full flex justify-center items-center mt-[72px] h-[156px] bg-gray-400 rounded-lg">
+      <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center mt-[48px] md:mt-[72px] md:h-[156px] bg-gray-400 rounded-lg">
         ADS
       </div>
 
-      <section className="mt-24 w-full pb-8 border-b border-gray-500">
-        <h2 className="font-ptserif font-bold text-black flex items-center gap-2">
+      <section className="md:mt-24 p-4 md:p-0 mt-12 w-full md:pb-8 border-b border-gray-500">
+        <h2 className="font-ptserif text-[32px] font-bold text-black flex items-center gap-2">
           <Newspaper size={24} weight="fill" className="text-orange-200" />
           Últimas notícias
         </h2>
 
-        <div className="flex items-start justify-between mt-8">
-          <div className="w-[800px]">
+        <div className="flex flex-col md:flex-row items-start md:justify-between mt-8">
+          <div className="max-w-[100vw] md:w-[800px]">
             <Notice
               category="mundo"
               createdAt="2021-09-13T15:00:00.000Z"
@@ -31,7 +31,9 @@ export default function LastNews() {
             />
           </div>
 
-          <div className="w-[380px] flex flex-col gap-8">
+          <div className="md:hidden my-8 w-full h-[1px] bg-gray-500" />
+
+          <div className="max-w-full md:w-[380px] flex flex-col gap-8">
             <Notice
               category="justiça"
               createdAt="2021-09-13T15:00:00.000Z"
@@ -63,26 +65,31 @@ export default function LastNews() {
       </section>
 
       <section className="w-full flex flex-col mt-8 gap-10">
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
           <LiveNotice />
-          <Notice
-            category="política"
-            createdAt="2021-09-13T15:00:00.000Z"
-            image=""
-            size="medium"
-            title="Trump deve se apresentar hoje à Justiça"
-          />
-          <Notice
-            category="justiça"
-            createdAt="2021-09-13T15:00:00.000Z"
-            image=""
-            size="medium"
-            title="Trump deve se apresentar hoje à Justiça"
-          />
+
+          <div className="px-4 md:p-0">
+            <Notice
+              category="política"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="medium"
+              title="Trump deve se apresentar hoje à Justiça"
+            />
+          </div>
+          <div className="px-4 md:p-0">
+            <Notice
+              category="justiça"
+              createdAt="2021-09-13T15:00:00.000Z"
+              image=""
+              size="medium"
+              title="Trump deve se apresentar hoje à Justiça"
+            />
+          </div>
         </div>
 
-        <div className="flex items-start justify-between">
-          <div className="max-w-[380px] flex flex-col gap-6">
+        <div className="flex flex-col md:flex-row px-4 md:px-0 items-start justify-between">
+          <div className="md:max-w-[380px] flex flex-col gap-6">
             <header className="flex items-center gap-2">
               <h2 className="text-2xl flex items-center gap-2 font-ptserif font-bold text-black">
                 <BookmarksSimple
@@ -148,7 +155,7 @@ export default function LastNews() {
         </div>
       </section>
 
-      <div className="w-full flex justify-center items-center my-24 h-[156px] bg-gray-400 rounded-lg">
+      <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
         ADS
       </div>
     </div>

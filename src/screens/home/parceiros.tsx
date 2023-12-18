@@ -6,17 +6,16 @@ import { Country } from '@/components/parceiros/country'
 
 export default function Parceiros() {
   return (
-    <section className="w-full h-[500px] bg-gray-600 py-24">
+    <section className="w-full md:h-[500px] bg-gray-600 py-12 md:py-24 px-4 md:px-0">
       <div className="w-full max-w-[1215px] mx-auto">
         <header className="flex justify-between items-center">
-          <h2 className="text-[32px] flex items-center gap-4 font-ptserif font-bold text-black">
+          <h2 className="text-[24px] md:text-[32px] flex items-center gap-4 font-ptserif font-bold text-black">
             <Tag
-              size={32}
               weight="fill"
-              className="text-orange-200 transform rotate-90"
+              className="text-orange-200 transform rotate-90 md:w-[32px] md:h-[32px] w-[24px] h-[24px]"
             />
             Parceiros
-            <span className="w-[6px] h-[6px] bg-gray-400 rounded-full" />
+            <span className="w-[6px] h-[6px] bg-gray-400 rounded-full hidden md:block" />
             <Country />
           </h2>
           <Button variant="tertiary" className="flex items-center gap-[10px]">
@@ -25,7 +24,7 @@ export default function Parceiros() {
           </Button>
         </header>
 
-        <div className="grid w-full grid-cols-2 gap-6 mt-8">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           <Parceiro />
           <Parceiro />
           <Parceiro />

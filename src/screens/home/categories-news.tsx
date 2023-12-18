@@ -9,8 +9,8 @@ import Button from '@/components/button'
 
 export default function CategoriesNews() {
   return (
-    <section className="mt-24 w-full max-w-[1215px] mx-auto pb-8">
-      <header className="flex justify-between items-center mb-8">
+    <section className="mt-12 md:mt-24 w-full max-w-[1215px] mx-auto px-4 md:p-0 md:pb-8">
+      <header className="hidden md:flex justify-between items-center mb-8">
         <h2 className="font-ptserif font-bold text-black text-[2rem] flex items-center gap-2">
           <GlobeHemisphereWest size={32} weight="fill" className="text-mundo" />
           Mundo
@@ -25,8 +25,8 @@ export default function CategoriesNews() {
         </Button>
       </header>
 
-      <div className="flex items-start justify-between mt-8 flex-row-reverse">
-        <div className="w-[800px]">
+      <div className="flex items-start justify-between mt-8 flex-col md:flex-row-reverse">
+        <div className="max-w-full md:w-[800px]">
           <Notice
             category="mundo"
             createdAt="2021-09-13T15:00:00.000Z"
@@ -37,7 +37,9 @@ export default function CategoriesNews() {
           />
         </div>
 
-        <div className="w-[380px] flex flex-col gap-8">
+        <div className="md:hidden my-8 w-full h-[1px] bg-gray-500" />
+
+        <div className="max-w-full md:w-[380px] flex flex-col gap-8">
           <Notice
             category="mundo"
             createdAt="2021-09-13T15:00:00.000Z"
@@ -67,12 +69,12 @@ export default function CategoriesNews() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center my-24 h-[156px] bg-gray-400 rounded-lg">
+      <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
         ADS
       </div>
 
-      <div className="grid grid-cols-3 gap-10">
-        <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-[repeat(3,minmax(286px,1fr))] md:grid-cols-3 gap-10 overflow-x-auto md:overflow-x-hidden">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Bank weight="fill" size={24} className="text-economia" /> Economia
           </h4>
@@ -113,7 +115,7 @@ export default function CategoriesNews() {
             <CaretRight size={16} className="text-orange-200" weight="bold" />
           </Button>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Flag weight="fill" size={24} className="text-política" /> Política
           </h4>
@@ -154,7 +156,7 @@ export default function CategoriesNews() {
             <CaretRight size={16} className="text-orange-200" weight="bold" />
           </Button>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Gavel weight="fill" size={24} className="text-justiça" /> Justiça
           </h4>

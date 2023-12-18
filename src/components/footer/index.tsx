@@ -109,7 +109,7 @@ export function Footer() {
       <FooterModal />
       <footer className="w-full bg-black h-[507px] pt-12">
         <div className="w-full max-w-[1215px] mx-auto flex justify-between items-start">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3">
             <p className="text-sm text-white font-medium">
               Baixe o app da Exato
             </p>
@@ -126,7 +126,7 @@ export function Footer() {
             {footerCategories.map((category, index) => (
               <div
                 key={category.title}
-                className="flex flex-col gap-4 w-[150px]"
+                className="flex flex-col gap-3 w-[150px]"
               >
                 <h4 className="text-sm text-white font-semibold">
                   {category.title}
@@ -143,7 +143,7 @@ export function Footer() {
                 ))}
 
                 {index === 0 && (
-                  <div className="flex flex-col gap-4 pt-4">
+                  <div className="flex flex-col gap-3 pt-4">
                     <a
                       href="#"
                       className="text-sm text-white font-normal transition-all duration-200 hover:text-orange-200"
@@ -223,7 +223,7 @@ export function Footer() {
             ©2023. Todos os direitos reservados. Revista Exato, Inc.
           </p>
 
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-3 items-center">
             <p className="text-sm font-normal flex items-center gap-1">
               Develop by: <Image alt="" src={Autis} width={16} />
               autis.com.br

@@ -78,15 +78,14 @@ export function Notice({
         </div>
       ) : (
         <div
-          className={`notice-card-${size === 'large' ? 'large' : 'medium'} w-[${
-            size === 'large' ? '800px' : '380px'
-          }] flex flex-col gap-4 cursor-pointer `}
+          className={`notice-card-${size === 'large' ? 'large' : 'medium'} ${
+            size === 'large' ? 'md:w-[800px]' : 'md:w-[380px]'
+          } w-full flex flex-col gap-4 cursor-pointer `}
         >
           <div
-            style={{ height: size === 'large' ? '470px' : '220px' }}
-            className={`w-full relative overflow-hidden h-[${
-              size === 'large' ? '470px' : '220px'
-            }] bg-gray-100 rounded-lg flex items-center justify-center`}
+            className={`w-full relative overflow-hidden h-[210px] ${
+              size === 'large' ? 'md:h-[470px]' : 'md:h-[220px]'
+            } bg-gray-100 rounded-lg flex items-center justify-center`}
           >
             Imagem
             <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
@@ -105,14 +104,16 @@ export function Notice({
               </span>
             </small>
             <h2
-              className={`text-black text-[${
-                size === 'large' ? '32px' : '24px'
-              }]`}
+              className={`text-black ${
+                size === 'large' ? 'md:text-[32px]' : 'md:text-[24px]'
+              } text-[24px]`}
             >
               {title}
             </h2>
             {description && (
-              <p className="text-gray-100 text-base">{description}</p>
+              <p className="text-gray-100 text-sm md:text-base">
+                {description}
+              </p>
             )}
           </div>
         </div>

@@ -25,7 +25,7 @@ export function Country() {
   }, [modalRef])
 
   return (
-    <div className="relative">
+    <div className="relative hidden md:block">
       <p
         onClick={() => setOpenExato(true)}
         className="font-ptserif text-gray-200 font-normal text-[32px] flex items-center gap-3 hover:text-orange-200 transition-all duration-150 cursor-pointer"

@@ -1,17 +1,19 @@
 import Sun from '@/components/icons/sun'
 import Link from 'next/link'
+import CaretRight from '@/components/icons/caret-right'
 
 import { SearchSection } from './clientComponents/search-input'
 import { Navigation } from './navigation'
 import { Exato } from './modals/exato'
 import { WeatherModal } from './modals/weather'
+import Button from '../button'
 
 export function Header() {
   return (
-    <header className="flex h-[224px] flex-col gap-[40px]">
+    <header className="flex h-[182px] md:h-[224px] flex-col gap-4 md:gap-[40px]">
       <div className="w-full h-10 bg-orange-100">
-        <div className="max-w-[1216px] p-2 mx-auto flex justify-between items-center">
-          <div className="flex gap-8 items-center">
+        <div className="max-w-[1216px] p-2 mx-auto flex justify-center md:justify-between items-center">
+          <div className="md:flex hidden gap-8 items-center">
             <Exato />
             <Link
               href="/"
@@ -21,7 +23,7 @@ export function Header() {
             </Link>
           </div>
 
-          <div className="flex gap-8">
+          <div className="md:flex gap-8 hidden">
             <Link
               href="/"
               className="font-manrope font-medium text-sm flex items-center gap-[6px] hover:text-orange-500 transition-all duration-150"
@@ -45,7 +47,7 @@ export function Header() {
           <div className="flex items-center gap-8">
             <WeatherModal />
 
-            <div className="w-[44px] h-[24px] rounded-[26px] bg-orange-300 flex items-center px-1">
+            <div className="w-[44px] h-[24px] rounded-[26px] bg-orange-300 hidden md:flex items-center px-1">
               <Sun weight="fill" size={18} />
             </div>
           </div>
@@ -53,6 +55,16 @@ export function Header() {
       </div>
 
       <SearchSection />
+
+      <div className="md:hidden flex justify-between items-center py-2 px-5 bg-orange-600">
+        <p className="text-gray-100 text-sm font-semibold">
+          Tenha acesso a <br /> conteúdos exclusivos!
+        </p>
+
+        <Button variant="secondary" size="md">
+          Assine a Exato <CaretRight size={16} weight="bold" />
+        </Button>
+      </div>
 
       <Navigation />
     </header>

@@ -4,6 +4,7 @@ import { Edition } from '@/components/edition'
 import CaretLeft from '@/components/icons/caret-left'
 import CaretRight from '@/components/icons/caret-right'
 import { useRef, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 
 export default function EditionCarousel() {
   const monthlyEditions = [
@@ -71,7 +72,7 @@ export default function EditionCarousel() {
 
   const [currentPage, setCurrentPage] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
-  const itemWidth = 360 // Largura de cada item do carrossel
+  const itemWidth = isMobile ? 332 : 360 // Largura de cada item do carrossel
   const itemsPerPage = 1 // Quantos itens devem ser passados por vez
 
   const moveCarouselTo = (page: number) => {
@@ -101,7 +102,7 @@ export default function EditionCarousel() {
     })
   }
 
-  const itemsPerSlide = 2 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
+  const itemsPerSlide = isMobile ? 1 : 2 // Como temos duas linhas, 4 itens por linha é igual a 8 por "página"
   const maxPage = Math.ceil(monthlyEditions.length / itemsPerSlide) - 1
 
   const paginationDots = Array.from({ length: maxPage + 1 }, (_, index) => (
@@ -119,7 +120,7 @@ export default function EditionCarousel() {
       <div className="h-[325px] w-[calc(100%-300px)] flex flex-col gap-10 relative">
         <div
           ref={carouselRef}
-          className="w-[100%] transition-all duration-500 ease grid-cols-[repeat(auto-fill,minmax(332px,1fr))] grid-rows-[repeat(2,130px)] grid grid-flow-col h-[258px]"
+          className="w-[100%] transition-all duration-500 ease md:grid-cols-[repeat(auto-fill,minmax(332px,1fr))] md:grid-rows-[repeat(2,130px)] grid grid-flow-col h-[109px] md:h-[258px]"
         >
           {monthlyEditions.map((edition, index) => (
             <Edition
@@ -131,7 +132,7 @@ export default function EditionCarousel() {
           ))}
         </div>
 
-        <footer className="flex justify-between items-center">
+        <footer className="hidden md:flex justify-between items-center">
           <div className="flex gap-2 items-center">{paginationDots}</div>
 
           <div className="flex items-center gap-3">
@@ -152,8 +153,8 @@ export default function EditionCarousel() {
           </div>
         </footer>
       </div>
-      <div className="w-[33%] h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
-      <div className="w-[320px] h-[366px] bg-gradient-to-l from-black/95 from-[50%] to-black/0 absolute right-0" />
+      <div className="hidden md:block w-[33%] h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
+      <div className="hidden md:block w-[320px] h-[366px] bg-gradient-to-l from-black/95 from-[50%] to-black/0 absolute right-0" />
     </>
   )
 }

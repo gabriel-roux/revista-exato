@@ -82,19 +82,46 @@ export function BreakingNews() {
   const isNextDisabled = currentIndex === news.length - 1
 
   return (
-    <div className="w-full h-[75px] rounded-t-[12px] rounded-r-[12px] bg-gray-700 relative">
-      <div className="w-full h-full flex items-center justify-between px-[20px] gap-[40px]">
-        <div className="flex items-center gap-[40px]">
-          <h2 className="text-orange-200 tracking-[-2%] text-right font-normal font-s font-manrope text-[24px] leading-6">
-            BREAKING <br />
+    <div className="w-full h-[116px] md:h-[75px] rounded-t-[12px] rounded-r-[12px] bg-gray-700 relative">
+      <div className="w-full h-full flex items-center flex-col md:flex-row md:justify-between px-[20px] py-4 md:py-0 gap-3 md:gap-[40px]">
+        <div className="flex justify-between md:justify-start items-center w-full md:gap-[40px]">
+          <h2 className="text-orange-200 tracking-[-2%] text-right font-normal font-s font-manrope text-lg md:text-[24px] leading-6">
+            BREAKING <br className="hidden md:block" />
             <span className=" font-extrabold">NEWS</span>
           </h2>
 
-          <h2 className="text-black font-medium text-sm">
+          <div className="md:hidden flex items-center gap-[10px]">
+            <p className="text-gray-300 font-normal">
+              {formatTime(news[currentIndex].createdAt)}
+            </p>
+            <CaretLeft
+              weight="bold"
+              size={16}
+              className={`text-orange-200 cursor-pointer ${
+                isPrevDisabled ? 'opacity-50' : ''
+              }`}
+              onClick={!isPrevDisabled ? prevNews : undefined}
+            />
+            <CaretRight
+              weight="bold"
+              size={16}
+              className={`text-orange-200 cursor-pointer ${
+                isNextDisabled ? 'opacity-50' : ''
+              }`}
+              onClick={!isNextDisabled ? nextNews : undefined}
+            />
+          </div>
+
+          <h2 className="hidden md:inline-block text-black font-medium text-sm">
             {news[currentIndex].legend}
           </h2>
         </div>
-        <div className="flex items-center gap-[10px]">
+
+        <h2 className="md:hidden text-black font-medium text-sm">
+          {news[currentIndex].legend}
+        </h2>
+
+        <div className="hidden md:flex items-center gap-[10px]">
           <p className="text-gray-300 font-normal">
             {formatTime(news[currentIndex].createdAt)}
           </p>
@@ -118,7 +145,7 @@ export function BreakingNews() {
       </div>
 
       <div
-        className="absolute bottom-0 bg-orange-400 transition-all duration-300 ease-linear"
+        className="hidden md:block absolute bottom-0 bg-orange-400 transition-all duration-300 ease-linear"
         style={{ height: '1.5px', width: `${progress}%` }}
       />
     </div>

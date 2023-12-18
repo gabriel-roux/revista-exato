@@ -5,8 +5,8 @@ import ColunistasCarousel from './colunistas-carousel'
 
 export default function Colunistas() {
   return (
-    <section className="w-full bg-black h-[370px] py-20">
-      <div className="w-full max-w-[1215px] mx-auto">
+    <section className="w-full bg-black h-[280px] md:h-[370px] pl-4 md:px-0 py-8 md:py-20">
+      <div className="w-full md:max-w-[1215px] mx-auto">
         <header className="flex justify-between items-center mb-8">
           <h2 className="text-[32px] flex items-center gap-2 font-ptserif font-bold text-white">
             <PenNib size={32} weight="fill" className="text-orange-200" />
