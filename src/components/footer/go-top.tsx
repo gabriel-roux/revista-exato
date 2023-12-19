@@ -17,7 +17,7 @@ export function GoToTop() {
       onMouseLeave={() => setIsHover(false)}
       className={`absolute ${
         isHover ? 'w-[150px]' : 'w-[40px]'
-      } -top-[84px] right-0 h-[40px] rounded-lg bg-orange-200 ease transition-all duration-500 flex items-center justify-center text-white hover:bg-orange-300`}
+      } -top-[48px] md:-top-[84px] right-0 h-[40px] rounded-lg bg-orange-200 ease transition-all duration-500 flex items-center justify-center text-white hover:bg-orange-300`}
     >
       <CaretUp
         size={18}

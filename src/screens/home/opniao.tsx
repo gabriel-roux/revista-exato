@@ -7,10 +7,10 @@ import OpniaoCarousel from './opniao-carousel'
 
 export default function Opniao() {
   return (
-    <section className="w-full bg-black h-[608px] py-20 relative mt-24">
+    <section className="w-full bg-black h-[608px] py-12 px-4 md:px-0 md:py-20 relative mt-24">
       <div className="w-full max-w-[1215px] mx-auto flex flex-col gap-6">
         <header className="flex justify-between">
-          <h2 className="text-[32px] flex items-   gap-4 font-ptserif font-bold text-white">
+          <h2 className="text-[32px] flex items-center gap-4 font-ptserif font-bold text-white">
             <Quotes
               size={32}
               weight="fill"
@@ -38,9 +38,9 @@ export default function Opniao() {
             />
           </div>
         </header>
-        <div className="flex justify-between items-start gap-10">
-          <div className="min-w-[496px] relative z-10 pt-6 pb- flex flex-col justify-between h-[376px]">
-            <h2 className="text-[32px] font-normal">
+        <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
+          <div className="md:min-w-[496px] relative z-10 pt-6 flex flex-col gap-8 justify-between md:h-[376px]">
+            <h2 className="text-[24px] md:text-[32px] font-normal">
               O governo, policitamente fragilizado, teme que o desgaste de Lula
               se reflita negativamente na operação política.
             </h2>

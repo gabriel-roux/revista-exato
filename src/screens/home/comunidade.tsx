@@ -7,9 +7,9 @@ import CaretRight from '@/components/icons/caret-right'
 
 export default function Comunidade() {
   return (
-    <section className="mt-24 w-full max-w-[1215px] mx-auto pb-8 border-b border-gray-500">
-      <div className="grid grid-cols-3 gap-10">
-        <div className="flex flex-col gap-6">
+    <section className="px-4 mt-12 md:mt-24 w-full max-w-[1215px] mx-auto pb-8 border-b border-gray-500">
+      <div className="grid grid-cols-[repeat(3,minmax(286px,1fr))] md:grid-cols-3 gap-10 overflow-x-auto md:overflow-x-hidden">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Bank weight="fill" size={24} className="text-economia" />{' '}
             Comunidade
@@ -51,7 +51,7 @@ export default function Comunidade() {
             <CaretRight size={16} className="text-orange-200" weight="bold" />
           </Button>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Flag weight="fill" size={24} className="text-política" />{' '}
             Comunidade
@@ -93,7 +93,7 @@ export default function Comunidade() {
             <CaretRight size={16} className="text-orange-200" weight="bold" />
           </Button>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-[286px]">
           <h4 className="flex gap-4 items-center font-ptserif text-[28px] text-black">
             <Gavel weight="fill" size={24} className="text-justiça" />{' '}
             Comunidade
@@ -139,7 +139,7 @@ export default function Comunidade() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center my-24 h-[156px] bg-gray-400 rounded-lg">
+      <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
         ADS
       </div>
     </section>

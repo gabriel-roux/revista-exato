@@ -43,8 +43,10 @@ export function GaleryBox({
         transition: `all 0.5s cubic-bezier(0.43, 0, 0.11, 1)`,
       }}
       className={`${
-        selectedImage === id ? 'min-w-[800px]' : 'min-w-[190px] cursor-pointer'
-      } h-[460px] relative rounded-lg bg-gray-200 flex items-center justify-center transition-all duration-500`}
+        selectedImage === id
+          ? 'md:min-w-[800px]'
+          : 'md:min-w-[190px] cursor-pointer'
+      } h-[193px] min-w-[335px] md:h-[460px] relative rounded-lg bg-gray-200 flex items-center justify-center transition-all duration-500`}
     >
       <div
         className={`absolute ${

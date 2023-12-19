@@ -7,7 +7,7 @@ export default function Template({ children }: { children: ReactNode }) {
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

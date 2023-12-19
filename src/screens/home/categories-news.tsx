@@ -9,7 +9,7 @@ import Button from '@/components/button'
 
 export default function CategoriesNews() {
   return (
-    <section className="mt-12 md:mt-24 w-full max-w-[1215px] mx-auto px-4 md:p-0 md:pb-8">
+    <section className="overflow-hidden my-12 md:mt-24 w-full max-w-[1215px] mx-auto px-4 md:p-0 md:pb-8">
       <header className="hidden md:flex justify-between items-center mb-8">
         <h2 className="font-ptserif font-bold text-black text-[2rem] flex items-center gap-2">
           <GlobeHemisphereWest size={32} weight="fill" className="text-mundo" />

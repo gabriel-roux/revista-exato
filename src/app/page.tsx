@@ -117,13 +117,13 @@ export default function Home() {
 
       <CategoriesNews />
 
-      {/* <Opniao /> */}
+      <Opniao />
 
-      {/* <Podcasts /> */}
+      <Podcasts />
 
       <Videos />
 
-      {/* <Galeria /> */}
+      <Galeria />
 
       <Parceiros />
 
@@ -131,7 +131,7 @@ export default function Home() {
 
       <Newsletter />
 
-      {/* <Comunidade /> */}
+      <Comunidade />
     </main>
   )
 }

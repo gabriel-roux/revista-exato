@@ -142,7 +142,7 @@ export default function OpniaoCarousel() {
       <div className="flex flex-col gap-10 relative">
         <div
           ref={carouselRef}
-          className="w-[100%] transition-all duration-500 ease grid-cols-[repeat(auto-fill,minmax(325px,1fr))] grid-rows-[repeat(2,156px)] grid grid-flow-col h-[312px]"
+          className="w-[100%] transition-all duration-500 ease grid-cols-[repeat(auto-fill,minmax(325px,1fr))] md:grid-rows-[repeat(2,156px)] grid grid-flow-col h-[138px] md:h-[312px]"
         >
           {opnioes.map((opniao, index) => (
             <Sugestion
@@ -156,7 +156,9 @@ export default function OpniaoCarousel() {
         </div>
 
         <footer className="flex justify-between items-center max-w-[620px]">
-          <div className="flex gap-2 items-center">{paginationDots}</div>
+          <div className="md:flex gap-2 items-center hidden">
+            {paginationDots}
+          </div>
 
           <div className="flex items-center gap-3">
             <button onClick={prevPage} disabled={currentPage === 0}>
@@ -176,8 +178,8 @@ export default function OpniaoCarousel() {
           </div>
         </footer>
       </div>
-      <div className="w-[50%] pointer-events-none h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
-      <div className="w-[320px] pointer-events-none h-[366px] bg-gradient-to-l from-black from-[80%] to-black/0 absolute right-0" />
+      <div className="hidden md:block w-[50%] pointer-events-none h-[366px] bg-gradient-to-r from-black from-[84%] to-black/0 absolute left-0" />
+      <div className="hidden md:block w-[320px] pointer-events-none h-[366px] bg-gradient-to-l from-black from-[80%] to-black/0 absolute right-0" />
     </>
   )
 }

@@ -7,6 +7,7 @@ import Share from '../icons/share'
 import CaretRight from '@/components/icons/caret-right'
 import CaretLeft from '@/components/icons/caret-left'
 import { ShareModal } from './share'
+import { isMobile } from 'react-device-detect'
 
 export function ImagesGalery() {
   const [selectedImage, setSelectedImage] = useState(1)
@@ -79,8 +80,8 @@ export function ImagesGalery() {
   }
 
   const calcCarouselPosition = () => {
-    const imageWidth = 190 // Largura da imagem não selecionada
-    const selectedImageWidth = 800 // Largura da imagem selecionada
+    const imageWidth = isMobile ? 359 * selectedImage - 16 : 190 // Largura da imagem não selecionada
+    const selectedImageWidth = isMobile ? 355 : 800 // Largura da imagem selecionada
 
     let offset = selectedImage === 0 ? 305 : selectedImage >= 5 ? 420 : 350
     // Calculando o deslocamento até a imagem selecionada
@@ -90,13 +91,19 @@ export function ImagesGalery() {
 
     // Ajuste para centralizar a imagem selecionada
     const centerOffset = (selectedImageWidth - imageWidth) / 2
-    return `translateX(calc(50% - ${offset}px - ${centerOffset}px))`
+    return isMobile
+      ? selectedImage === 0
+        ? 'translateX(16px)'
+        : `translateX(-${imageWidth}px)`
+      : `translateX(calc(50% - ${offset}px - ${centerOffset}px))`
   }
 
   const paginationDots = Array.from({ length: images.length }, (_, index) => (
     <button
       key={index}
-      className={`w-10 h-[2px] transition-all duration-200 ${
+      className={`${
+        index > 4 && 'hidden md:block'
+      } w-10 h-[2px] transition-all duration-200 ${
         selectedImage === index ? 'bg-orange-200' : 'bg-gray-200'
       }`}
       onClick={() => setSelectedImage(index)}
@@ -125,7 +132,7 @@ export function ImagesGalery() {
         ))}
       </div>
 
-      <footer className="mt-6 flex flex-col max-w-[1215px] w-full mx-auto gap-6">
+      <footer className="px-4 md:px-0 mt-6 flex flex-col max-w-[1215px] w-full mx-auto gap-2 md:gap-6">
         <div className="flex justify-between items-start w-full">
           <div className="flex items-start gap-8">
             <small
@@ -138,7 +145,7 @@ export function ImagesGalery() {
               <span className="text-gray-300 font-normal">{images.length}</span>
             </small>
 
-            <div className="flex flex-col gap-1">
+            <div className="hidden md:flex flex-col gap-1">
               <h2 className="text-[24px] text-white font-medium">
                 Voluntários com elefantes em Bangkok, Tailândia
               </h2>
@@ -159,7 +166,24 @@ export function ImagesGalery() {
           <ShareModal />
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="md:hidden flex flex-col gap-1">
+          <h2 className="text-lg text-white font-medium">
+            Voluntários com elefantes em Bangkok, Tailândia
+          </h2>
+          <small
+            className={`text-gray-400 text-sm uppercase md:text-base font-semibold font-manrope flex items-center`}
+          >
+            Nome da emissora
+            <span
+              className={`inline-block w-[6px] h-[6px] bg-gray-200 rounded-full ml-2 mr-2`}
+            ></span>
+            <span className="text-gray-400 text-sm md:text-base font-normal">
+              Nome do fotógrafo
+            </span>
+          </small>
+        </div>
+
+        <div className="flex justify-between items-center md:py-0 pt-6">
           <div className="flex gap-2 items-center">{paginationDots}</div>
 
           <div className="flex items-center gap-3">
