@@ -1,0 +1,39 @@
+export default function ListMenu() {
+  return (
+    <svg
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="3.65002"
+        y1="5.25"
+        x2="21.35"
+        y2="5.25"
+        stroke="#F24D00"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="3.25"
+        y1="12.25"
+        x2="15.75"
+        y2="12.25"
+        stroke="#F24D00"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="3.25"
+        y1="19.25"
+        x2="18.75"
+        y2="19.25"
+        stroke="#F24D00"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
