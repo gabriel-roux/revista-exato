@@ -22,7 +22,7 @@ export default function Menu({ closeMenu }: MenuProps) {
         <header className="flex justify-between items-center">
           <ExatoLogo className="w-[102px] h-[35px] fill-orange-200" />
 
-          <Button variant="tertiary" size="md">
+          <Button onClick={closeMenu} variant="tertiary" size="md">
             <X size={24} weight="bold" className="text-gray-300" />
           </Button>
         </header>

@@ -228,32 +228,34 @@ export function WeatherModal() {
                     />
                   </div>
 
-                  <div className="w-[220px] mt-[50px] py-2 px-5 rounded-lg shadow-exato bg-[#FFF]">
-                    <ul className="flex flex-col list-none">
-                      {searchResults?.map((result) => (
-                        <li
-                          onClick={() => {
-                            setFocusInput(false)
-                            setSearchTerm('')
-                            fetch(
-                              `http://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=${result.name}`,
-                            )
-                              .then((response) => response.json())
-                              .then((result: WeatherProps) => {
-                                setWeather(result)
-                              })
-                              .catch((error) => console.log('error', error))
-                          }}
-                          className="py-[10px]"
-                          key={`${result.name}-${result.country}-${result.region}`}
-                        >
-                          <p className="text-black text-sm font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
-                            {result.name + ' - ' + result.country}
-                          </p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {searchResults.length > 0 && (
+                    <div className="w-[220px] mt-[50px] py-2 px-5 rounded-lg shadow-exato bg-[#FFF]">
+                      <ul className="flex flex-col list-none">
+                        {searchResults?.map((result) => (
+                          <li
+                            onClick={() => {
+                              setFocusInput(false)
+                              setSearchTerm('')
+                              fetch(
+                                `http://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=${result.name}`,
+                              )
+                                .then((response) => response.json())
+                                .then((result: WeatherProps) => {
+                                  setWeather(result)
+                                })
+                                .catch((error) => console.log('error', error))
+                            }}
+                            className="py-[10px]"
+                            key={`${result.name}-${result.country}-${result.region}`}
+                          >
+                            <p className="text-black text-sm font-manrope font-medium transition-all duration-200 ease hover:text-orange-200">
+                              {result.name + ' - ' + result.country}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
