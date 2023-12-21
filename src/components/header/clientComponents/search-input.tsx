@@ -67,7 +67,7 @@ export function SearchSection() {
           </div>
         </div>
       </div>
-      {openMenu && <Menu />}
+      {openMenu && <Menu closeMenu={() => setOpenMenu(false)} />}
     </>
   )
 }
