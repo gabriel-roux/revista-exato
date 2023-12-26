@@ -34,7 +34,7 @@ export default function SlugPage() {
           </p>
         </div>
 
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center mt-16">
           <div className="flex items-center gap-3">
             <Image
               src="https://github.com/rafaelofil.png"
