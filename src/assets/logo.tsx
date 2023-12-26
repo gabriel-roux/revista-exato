@@ -1,15 +1,17 @@
 interface ExportLogoProps {
   className?: string
   fill?: string
+  onClick?: () => void
 }
 
-export default function ExatoLogo({ className }: ExportLogoProps) {
+export default function ExatoLogo({ className, onClick }: ExportLogoProps) {
   return (
     <svg
       width="146"
       height="45"
       viewBox="0 0 146 45"
       fill="none"
+      onClick={onClick}
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >

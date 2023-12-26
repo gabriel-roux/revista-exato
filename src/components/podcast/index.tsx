@@ -4,8 +4,6 @@ import React, { useState } from 'react'
 import PodcastImg from '../../assets/podcast.png'
 import Image from 'next/image'
 import PauseCircle from '../icons/pause'
-import Button from '../button'
-import Share from '../icons/share'
 import { ShareModal } from './share'
 
 interface PodcastProps {

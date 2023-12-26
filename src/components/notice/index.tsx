@@ -55,8 +55,61 @@ export function Notice({
   return (
     <>
       {size === 'small' ? (
-        <div className="notice-card-small flex gap-5 w-[380px] cursor-pointer">
-          <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+        <>
+          {!description ? (
+            <div className="notice-card-small flex gap-5 w-[380px] cursor-pointer">
+              <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+                IMAGEM
+                <div
+                  className={`absolute bottom-0 h-1 w-full ${perCategory}`}
+                />
+              </div>
+
+              <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+                <small
+                  className={`text-${category} uppercase text-sm font-semibold font-manrope flex items-center`}
+                >
+                  {category}
+                  <span
+                    className={`inline-block w-[6px] h-[6px] ${perCategory} rounded-full ml-2 mr-2`}
+                  ></span>
+                  <span className="text-gray-200 font-normal">
+                    {formatDate(createdAt)}
+                  </span>
+                </small>
+                <h2 className="text-black text-base">{title}</h2>
+              </div>
+            </div>
+          ) : (
+            <div className="notice-card-small flex gap-5 w-[795px] cursor-pointer">
+              <div className="min-w-[275px] overflow-hidden h-[185px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+                IMAGEM
+                <div
+                  className={`absolute bottom-0 h-1 w-full ${perCategory}`}
+                />
+              </div>
+
+              <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+                <small
+                  className={`text-${category} uppercase text-sm font-semibold font-manrope flex items-center`}
+                >
+                  {category}
+                  <span
+                    className={`inline-block w-[6px] h-[6px] ${perCategory} rounded-full ml-2 mr-2`}
+                  ></span>
+                  <span className="text-gray-200 font-normal">
+                    {formatDate(createdAt)}
+                  </span>
+                </small>
+                <h2 className="text-black text-xl">{title}</h2>
+                <p className="text-gray-100 text-base">{description}</p>
+              </div>
+            </div>
+          )}
+        </>
+      ) : size === 'medium' && description ? (
+        <div className="notice-card-small w-full flex flex-row-reverse justify-between gap-5 cursor-pointer pb-8 border-b border-gray-500">
+          <div className="min-w-[275px] overflow-hidden h-[185px] rounded-lg bg-gray-100 flex items-center justify-center relative">
             IMAGEM
             <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
           </div>
@@ -73,7 +126,8 @@ export function Notice({
                 {formatDate(createdAt)}
               </span>
             </small>
-            <h2 className="text-black text-base">{title}</h2>
+            <h2 className="text-black text-[32px]">{title}</h2>
+            <p className="text-gray-100 text-base">{description}</p>
           </div>
         </div>
       ) : (

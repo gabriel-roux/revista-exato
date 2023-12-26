@@ -7,10 +7,13 @@ import Button from '../../button'
 import { useState } from 'react'
 import ListMenu from '@/components/icons/menu'
 import Menu from '../modals/menu'
+import { useRouter } from 'next/navigation'
 
 export function SearchSection() {
   const [focused, setFocused] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
+
+  const router = useRouter()
 
   return (
     <>
@@ -34,10 +37,11 @@ export function SearchSection() {
           </div>
 
           <ExatoLogo
+            onClick={() => router.push('/')}
             className={
               focused
-                ? 'w-[118px] h-10 md:w-[150px] md:h-[50px] transform -translate-x-[360%] md:translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
-                : 'transition-all duration-[800ms] ease w-[145px] h-[50px] fill-[#070707] hover:fill-orange-200'
+                ? 'cursor-pointer w-[118px] h-10 md:w-[150px] md:h-[50px] transform -translate-x-[360%] md:translate-x-[360%] transition-all fill-[#070707] hover:fill-orange-200 duration-[800ms] ease'
+                : 'cursor-pointer transition-all duration-[800ms] ease w-[145px] h-[50px] fill-[#070707] hover:fill-orange-200'
             }
           />
 
