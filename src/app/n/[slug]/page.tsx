@@ -16,6 +16,10 @@ import PaperPlaneTilt from '@/components/icons/paper-plane-tilt'
 import Microphone from '@/components/icons/microphone'
 import PenNib from '@/components/icons/pen-nib'
 import ColunistaImg from '@/assets/colunista.png'
+import { Newsletter } from '@/screens/home/newsletter'
+import ArrowCircleLeft from '@/components/icons/arrow-circle-left'
+import ArrowCircleRight from '@/components/icons/arrow-circle-right'
+import MoreNews from '@/screens/categorias/more-news'
 
 export default function SlugPage() {
   return (
@@ -585,6 +589,156 @@ export default function SlugPage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        className={`overflow-hidden flex gap-4 w-full max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
+      >
+        <div className="flex flex-col gap-3 w-[530px]">
+          <div className="w-full bg-gray-100 h-[340px]" />
+
+          <small
+            className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
+          >
+            Legenda: O surgimento das criptomoedas trouxe uma mudança de
+            paradigma no mundo financeiro...
+          </small>
+          <small
+            className={`text-gray-200 text-xs font-manrope flex items-center`}
+          >
+            Foto: Globo/João Santos
+          </small>
+        </div>
+        <div className="flex flex-col gap-3 w-[370px]">
+          <div className="w-full bg-gray-100 h-[340px]" />
+
+          <small
+            className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
+          >
+            Legenda: O surgimento das criptomoedas trouxe uma mudança de
+            paradigma no mundo financeiro...
+          </small>
+          <small
+            className={`text-gray-200 text-xs font-manrope flex items-center`}
+          >
+            Foto: Globo/João Santos
+          </small>
+        </div>
+        <div className="flex flex-col gap-3 w-[446px]">
+          <div className="w-full bg-gray-100 h-[340px]" />
+
+          <small
+            className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
+          >
+            Legenda: O surgimento das criptomoedas trouxe uma mudança de
+            paradigma no mundo financeiro...
+          </small>
+          <small
+            className={`text-gray-200 text-xs font-manrope flex items-center`}
+          >
+            Foto: Globo/João Santos
+          </small>
+        </div>
+      </section>
+
+      <section className="overflow-hidden w-full max-w-[1215px] mx-auto mt-8 px-4 md:p-0">
+        <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
+          ADS
+        </div>
+
+        <div>
+          <h2 className="text-black text-[24px] font-ptserif font-bold">
+            Galeria
+          </h2>
+
+          <div className="flex flex-col gap-4">
+            <div className="w-full h-[612px] bg-gray-100 mt-7 rounded-lg"></div>
+
+            <div className="w-full flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <small
+                  className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
+                >
+                  Legenda: O surgimento das criptomoedas trouxe uma mudança de
+                  paradigma no mundo financeiro...
+                </small>
+                <small
+                  className={`text-gray-200 text-xs font-manrope flex items-center`}
+                >
+                  Foto: Globo/João Santos
+                </small>
+              </div>
+              <button className="text-orange-200">
+                <ShareNetwork size={24} weight="fill" />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button className="text-gray-200">
+                <ArrowCircleLeft size={28} />
+              </button>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                1/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                2/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                3/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                4/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                5/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                6/7
+              </div>
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+                7/7
+              </div>
+              <button className="text-gray-200">
+                <ArrowCircleRight size={28} />
+              </button>
+            </div>
+          </div>
+
+          <div className="w-full h-[1px] bg-gray-500 my-12" />
+
+          <div className="flex items-center gap-4 mb-12">
+            <p className="text-base font-manrope text-black font-bold">Tags:</p>
+            <small
+              className={`text-gray-200 text-sm uppercase font-semibold font-manrope flex items-center`}
+            >
+              Política
+              <span
+                className={`inline-block w-[6px] h-[6px] bg-gray-200 rounded-full ml-2 mr-2`}
+              ></span>
+              <span className="text-gray-200 font-normal">Brasil</span>
+              <span
+                className={`inline-block w-[6px] h-[6px] bg-gray-200 rounded-full ml-2 mr-2`}
+              ></span>
+              <span className="text-gray-200 font-normal">Eleições</span>
+              <span
+                className={`inline-block w-[6px] h-[6px] bg-gray-200 rounded-full ml-2 mr-2`}
+              ></span>
+              <span className="text-gray-200 font-normal">Economia</span>
+            </small>
+          </div>
+        </div>
+
+        <Newsletter isRounded />
+
+        <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
+          ADS
+        </div>
+
+        <MoreNews />
+
+        <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
+          ADS
         </div>
       </section>
     </main>

@@ -2,9 +2,19 @@ import PaperPlaneTilt from '../../components/icons/paper-plane-tilt'
 import CaretRight from '../../components/icons/caret-right'
 import Button from '@/components/button'
 
-export function Newsletter() {
+interface NewsletterProps {
+  isRounded?: boolean
+}
+
+export function Newsletter(
+  { isRounded = false }: NewsletterProps = { isRounded: false },
+) {
   return (
-    <section className="w-full bg-black md:h-[460px] py-10 px-4 md:px-0 md:py-20">
+    <section
+      className={`w-full bg-black md:h-[460px] py-10 px-4 md:px-0 md:py-20 ${
+        isRounded && 'rounded-xl'
+      }`}
+    >
       <div className="w-full max-w-[1005px] mx-auto flex flex-col gap-[48px]">
         <div className="flex items-center justify-center flex-col gap-4">
           <PaperPlaneTilt size={32} weight="fill" className="text-orange-200" />
