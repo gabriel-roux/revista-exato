@@ -63,7 +63,7 @@ export function LastNewsCategories() {
           </div>
         </div>
 
-        <div className="w-[380px] flex flex-col gap-8 pl-8">
+        <div className="hidden md:w-[380px] md:flex flex-col gap-8 pl-8">
           <header className="hidden md:flex justify-between items-center">
             <h2 className="font-ptserif font-bold text-black text-[28px] flex items-center gap-2">
               Top 5 semana

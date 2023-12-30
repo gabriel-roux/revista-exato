@@ -24,7 +24,7 @@ import MoreNews from '@/screens/categorias/more-news'
 export default function SlugPage() {
   return (
     <main className="pt-16 border-t border-gray-500">
-      <section className="overflow-hidden w-full max-w-[1215px] mx-auto px-4 md:p-0">
+      <section className="overflow-hidden w-full max-w-[100vw] md:max-w-[1215px] mx-auto px-4 md:p-0">
         <div className="flex flex-col gap-3 items-center">
           <small
             className={`text-mundo uppercase text-sm font-semibold font-manrope flex items-center`}
@@ -37,7 +37,7 @@ export default function SlugPage() {
           </small>
 
           <h1
-            className={`text-black text-[44px] font-manrope font-bold text-center`}
+            className={`text-black text-2xl md:text-[44px] font-manrope font-bold text-center`}
           >
             Educação cripto é a chave para adoção e um pilar no desenvolvimento
             da indústria, afirma Binance
@@ -67,21 +67,21 @@ export default function SlugPage() {
             >
               Por Priscila cardoso
               <span
-                className={`inline-block w-[6px] h-[6px] bg-gray-400 rounded-full ml-2 mr-2`}
+                className={`hidden md:inline-block w-[6px] h-[6px] bg-gray-400 rounded-full ml-2 mr-2`}
               ></span>
-              <span className="text-gray-200 font-normal">
+              <span className="text-gray-200 font-normal hidden md:flex">
                 Guerra na ucrânia
               </span>
             </small>
           </div>
           <small
-            className={`text-gray-200 text-sm font-manrope flex items-center`}
+            className={`text-gray-200 text-sm font-manrope hidden md:flex items-center`}
           >
             Postado em 12 de novembro de 2023 às 14:32
             <span
-              className={`inline-block w-[6px] h-[6px] bg-gray-400 rounded-full ml-2 mr-2`}
+              className={`w-[6px] h-[6px] bg-gray-400 rounded-full ml-2 mr-2 hidden md:inline-block`}
             ></span>
-            <span className="text-gray-200 font-normal">
+            <span className="text-gray-200 font-normal hidden md:flex">
               Atualizado em 22 de novembro de 2023 às: 16:01
             </span>
           </small>
@@ -100,23 +100,23 @@ export default function SlugPage() {
         </div>
       </section>
 
-      <div className="w-full h-[612px] bg-gray-100 mt-7"></div>
+      <div className="w-full h-[312px] md:h-[612px] bg-gray-100 mt-7"></div>
 
-      <section className="overflow-hidden w-full max-w-[1215px] mx-auto mt-2 px-4 md:p-0">
+      <section className="overflow-hidden w-full md:max-w-[1215px] mx-auto mt-2 px-4 md:p-0">
         <div className="w-full flex justify-between items-center">
-          <div className="flex items-center gap-3">
+          <div className="flex items-start gap-3 flex-col md:flex-row">
             <small
               className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
             >
               Legenda: O surgimento das criptomoedas trouxe uma mudança de
               paradigma no mundo financeiro...
             </small>
+            <small
+              className={`text-gray-200 text-xs font-manrope flex items-center`}
+            >
+              Foto: Globo/João Santos
+            </small>
           </div>
-          <small
-            className={`text-gray-200 text-xs font-manrope flex items-center`}
-          >
-            Foto: Globo/João Santos
-          </small>
         </div>
 
         <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
@@ -124,21 +124,21 @@ export default function SlugPage() {
         </div>
 
         <div className="w-full flex-1 justify-between flex items-start">
-          <div className="w-full max-w-[800px] flex flex-col gap-9 ">
-            <div className="flex gap-3 items-center">
-              <p className="font-manrope text-gray-200 text-sm">
+          <div className="w-full max-w-[600px] md:max-w-[800px] flex flex-col gap-9 ">
+            <div className="flex gap-3 items-start md:items-center flex-col md:flex-row">
+              <p className="font-manrope text-gray-200 text-xs md:text-sm">
                 Ouça este conteúdo:
               </p>
 
-              <footer className="flex items-center gap-3">
-                <div className="flex items-center gap-2">
+              <footer className="flex items-center gap-1">
+                <div className="flex items-center gap-1">
                   <PauseCircle
                     size={30}
                     className="text-orange-200"
                     weight="fill"
                   />
 
-                  <div className="w-[460px] h-[6px] bg-gray-600 rounded-full">
+                  <div className="w-[200px] md:w-[460px] h-[6px] bg-gray-600 rounded-full">
                     <div className="w-[50%] h-full bg-orange-400 rounded-full relative">
                       <div className="absolute w-4 h-4 border-2 border-white bg-orange-200 rounded-full top-[-5px] right-0"></div>
                     </div>
@@ -188,7 +188,7 @@ export default function SlugPage() {
                 benefícios que ele oferece.
               </p>
 
-              <div className="pl-[50px] border-l border-gray-500 flex flex-col gap-8">
+              <div className="md:pl-[50px] border-l border-gray-500 flex flex-col gap-8">
                 <h2 className="font-ptserif text-black font-bold text-2xl">
                   Talvez você possa gostar
                 </h2>
@@ -247,7 +247,7 @@ export default function SlugPage() {
               <div className="w-full h-[1px] bg-gray-500 my-4" />
 
               <div className="flex flex-col gap-4">
-                <div className="w-full h-[414px] bg-gray-100 rounded-lg"></div>
+                <div className="w-full h-[280px] md:h-[414px] bg-gray-100 rounded-lg"></div>
 
                 <div className="w-full flex justify-between items-center">
                   <div className="flex items-center gap-3">
@@ -362,7 +362,7 @@ export default function SlugPage() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-8 w-full max-w-[275px]">
+          <div className="md:flex flex-col gap-8 w-full max-w-[275px] hidden">
             <div className="flex flex-col gap-3">
               <Image
                 src={Banner}
@@ -370,7 +370,7 @@ export default function SlugPage() {
                 width={275}
                 height={392}
                 quality={100}
-                className="rounded-lg"
+                className="rounded-lg max-w-[275px]"
               />
 
               <footer className="flex w-full justify-between items-center">
@@ -593,9 +593,9 @@ export default function SlugPage() {
       </section>
 
       <section
-        className={`overflow-hidden flex gap-4 w-full max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
+        className={`overflow-hidden flex flex-col md:flex-row gap-4 w-full max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
       >
-        <div className="flex flex-col gap-3 w-[530px]">
+        <div className="flex flex-col gap-3 max-w-[100vw] md:w-[530px]">
           <div className="w-full bg-gray-100 h-[340px]" />
 
           <small
@@ -610,7 +610,7 @@ export default function SlugPage() {
             Foto: Globo/João Santos
           </small>
         </div>
-        <div className="flex flex-col gap-3 w-[370px]">
+        <div className="flex flex-col gap-3 max-w-[100vw] md:w-[370px]">
           <div className="w-full bg-gray-100 h-[340px]" />
 
           <small
@@ -625,7 +625,7 @@ export default function SlugPage() {
             Foto: Globo/João Santos
           </small>
         </div>
-        <div className="flex flex-col gap-3 w-[446px]">
+        <div className="flex flex-col gap-3 max-w-[100vw] md:w-[446px]">
           <div className="w-full bg-gray-100 h-[340px]" />
 
           <small
@@ -642,7 +642,7 @@ export default function SlugPage() {
         </div>
       </section>
 
-      <section className="overflow-hidden w-full max-w-[1215px] mx-auto mt-8 px-4 md:p-0">
+      <section className="overflow-hidden w-full max-w-[1215px] mx-auto md:mt-8 px-4 md:p-0">
         <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
           ADS
         </div>
@@ -653,7 +653,7 @@ export default function SlugPage() {
           </h2>
 
           <div className="flex flex-col gap-4">
-            <div className="w-full h-[612px] bg-gray-100 mt-7 rounded-lg"></div>
+            <div className="w-full h-[300px] md:h-[612px] bg-gray-100 mt-7 rounded-lg"></div>
 
             <div className="w-full flex justify-between items-center">
               <div className="flex items-center gap-3">
@@ -687,16 +687,16 @@ export default function SlugPage() {
               <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
                 3/7
               </div>
-              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg md:flex justify-center items-center hidden">
                 4/7
               </div>
-              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg md:flex justify-center items-center hidden">
                 5/7
               </div>
-              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg md:flex justify-center items-center hidden">
                 6/7
               </div>
-              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
+              <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg md:flex justify-center items-center hidden">
                 7/7
               </div>
               <button className="text-gray-200">

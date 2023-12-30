@@ -81,7 +81,7 @@ export function Notice({
               </div>
             </div>
           ) : (
-            <div className="notice-card-small flex gap-5 w-[795px] cursor-pointer">
+            <div className="notice-card-small flex flex-col md:flex-row gap-5 md:w-[795px] cursor-pointer">
               <div className="min-w-[275px] overflow-hidden h-[185px] rounded-lg bg-gray-100 flex items-center justify-center relative">
                 IMAGEM
                 <div
@@ -89,7 +89,7 @@ export function Notice({
                 />
               </div>
 
-              <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+              <div className="w-full md:w-[calc(100%-116px)] flex flex-col gap-3">
                 <small
                   className={`text-${category} uppercase text-sm font-semibold font-manrope flex items-center`}
                 >
@@ -102,19 +102,21 @@ export function Notice({
                   </span>
                 </small>
                 <h2 className="text-black text-xl">{title}</h2>
-                <p className="text-gray-100 text-base">{description}</p>
+                <p className="text-gray-100 text-base md:inline-block hidden">
+                  {description}
+                </p>
               </div>
             </div>
           )}
         </>
       ) : size === 'medium' && description ? (
-        <div className="notice-card-small w-full flex flex-row-reverse justify-between gap-5 cursor-pointer pb-8 border-b border-gray-500">
+        <div className="notice-card-small w-full flex flex-col md:flex-row-reverse justify-between gap-5 cursor-pointer pb-8 border-b border-gray-500">
           <div className="min-w-[275px] overflow-hidden h-[185px] rounded-lg bg-gray-100 flex items-center justify-center relative">
             IMAGEM
             <div className={`absolute bottom-0 h-1 w-full ${perCategory}`} />
           </div>
 
-          <div className="w-[calc(100%-116px)] flex flex-col gap-3">
+          <div className="w-full md:w-[calc(100%-116px)] flex flex-col gap-3">
             <small
               className={`text-${category} uppercase text-sm font-semibold font-manrope flex items-center`}
             >
@@ -126,8 +128,10 @@ export function Notice({
                 {formatDate(createdAt)}
               </span>
             </small>
-            <h2 className="text-black text-[32px]">{title}</h2>
-            <p className="text-gray-100 text-base">{description}</p>
+            <h2 className="text-black text-2xl md:text-[32px]">{title}</h2>
+            <p className="text-gray-100 text-base md:inline-block hidden">
+              {description}
+            </p>
           </div>
         </div>
       ) : (
