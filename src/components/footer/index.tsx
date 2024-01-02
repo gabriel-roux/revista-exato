@@ -237,7 +237,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="w-full px-4 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+          <div className="w-full px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-8">
             <p className="text-base text-gray-400">Acompanhe as redes</p>
 
             <div className="flex items-center gap-3">
