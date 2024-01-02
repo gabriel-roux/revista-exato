@@ -6,7 +6,7 @@ import { brasilMenu } from './seeds'
 export function Navigation() {
   return (
     <div className="hidden md:block w-full py-[12px] border-t border-gray-500">
-      <div className="flex gap-[40px] w-full max-w-[1215px] mx-auto">
+      <div className="flex gap-[40px] w-full md:max-w-[1215px] mx-auto">
         <BroadCastTag />
 
         <div className="flex items-center gap-[39px]">

@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="flex h-[182px] md:h-[224px] flex-col gap-4 md:gap-[40px]">
       <div className="w-full h-10 bg-orange-100">
-        <div className="max-w-[1216px] p-2 mx-auto flex justify-center md:justify-between items-center">
+        <div className="md:max-w-[1216px] p-2 mx-auto flex justify-center md:justify-between items-center">
           <div className="md:flex hidden gap-8 items-center">
             <Exato />
             <Link

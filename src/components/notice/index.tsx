@@ -57,8 +57,8 @@ export function Notice({
       {size === 'small' ? (
         <>
           {!description ? (
-            <div className="notice-card-small flex gap-5 w-[380px] cursor-pointer">
-              <div className="w-[96px] overflow-hidden h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
+            <div className="notice-card-small flex gap-2 md:gap-5 md:w-[380px] cursor-pointer">
+              <div className="w-[80px] h-[80px] md:w-[96px] overflow-hidden md:h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
                 IMAGEM
                 <div
                   className={`absolute bottom-0 h-1 w-full ${perCategory}`}

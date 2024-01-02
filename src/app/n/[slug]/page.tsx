@@ -17,9 +17,12 @@ import Microphone from '@/components/icons/microphone'
 import PenNib from '@/components/icons/pen-nib'
 import ColunistaImg from '@/assets/colunista.png'
 import { Newsletter } from '@/screens/home/newsletter'
+import CaretDown from '@/components/icons/caret-down'
 import ArrowCircleLeft from '@/components/icons/arrow-circle-left'
 import ArrowCircleRight from '@/components/icons/arrow-circle-right'
 import MoreNews from '@/screens/categorias/more-news'
+import Heart from '@/components/icons/heart'
+import ShareFat from '@/components/icons/share-fat'
 
 export default function SlugPage() {
   return (
@@ -37,7 +40,7 @@ export default function SlugPage() {
           </small>
 
           <h1
-            className={`text-black text-2xl md:text-[44px] font-manrope font-bold text-center`}
+            className={`text-black text-2xl md:text-5xl font-manrope font-bold text-center`}
           >
             Educação cripto é a chave para adoção e um pilar no desenvolvimento
             da indústria, afirma Binance
@@ -593,7 +596,7 @@ export default function SlugPage() {
       </section>
 
       <section
-        className={`overflow-hidden flex flex-col md:flex-row gap-4 w-full max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
+        className={`overflow-hidden flex flex-col md:flex-row gap-4 w-full md:max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
       >
         <div className="flex flex-col gap-3 max-w-[100vw] md:w-[530px]">
           <div className="w-full bg-gray-100 h-[340px]" />
@@ -730,6 +733,109 @@ export default function SlugPage() {
         </div>
 
         <Newsletter isRounded />
+
+        <div className="w-full flex flex-col gap-16 my-12">
+          <div className="w-full flex flex-col gap-4">
+            <h2 className="font-manrope text-2xl text-black font-bold">
+              Comentarios
+            </h2>
+
+            <div className="w-full h-[1px] bg-gray-500" />
+          </div>
+
+          <div className="w-full flex flex-col gap-11">
+            <div className="md:max-w-[800px] w-full h-[235px] border border-gray-500 flex flex-col gap-6 items-center justify-center rounded-lg mx-auto">
+              <h3 className="font-manrope text-black text-center">
+                Faça o login na exato para poder comentar
+              </h3>
+
+              <Button variant="primary" size="lg" className="border-gray-300">
+                Clique aqui para fazer o login
+              </Button>
+            </div>
+
+            <div className="md:max-w-[800px] w-full flex flex-col gap-9 mx-auto">
+              <div className="w-full flex justify-between items-center">
+                <div className="flex gap-2">
+                  <p className="text-base text-gray-300 font-manrope">
+                    Ordenar por:
+                  </p>
+
+                  <button className="flex items-center gap-1 text-black font-manrope font-medium">
+                    Novos <CaretDown size={16} className="text-orange-200" />
+                  </button>
+                </div>
+
+                <p className="text-base text-gray-300 font-manrope">
+                  300 Comentarios
+                </p>
+              </div>
+
+              <div className="flex items-start gap-6 pb-9 border-b border-gray-500">
+                <Image
+                  src={ColunistaImg}
+                  alt="Comentario"
+                  width={58}
+                  height={58}
+                  quality={100}
+                  className="rounded-full flex-shrink-0"
+                />
+
+                <div className="flex flex-col gap-3">
+                  <header className="flex items-center justify-between w-full">
+                    <small
+                      className={`text-black text-base font-semibold font-manrope flex items-center`}
+                    >
+                      Kevin Murphy
+                      <span
+                        className={`inline-block w-[6px] h-[6px] bg-gray-300 rounded-full ml-2 mr-2`}
+                      ></span>
+                      <span className="text-gray-300 font-normal">
+                        2 dias atrás
+                      </span>
+                    </small>
+
+                    <button className="text-orange-200">
+                      <ShareNetwork size={24} weight="fill" />
+                    </button>
+                  </header>
+
+                  <p className="text-sm font-manrope text-gray-100 ">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi architecto beatae vitae dicta sunt explicabo.
+                  </p>
+
+                  <footer className="flex items-center gap-4">
+                    <button className="flex items-center gap-2 text-black font-manrope text-xs font-medium">
+                      <Heart size={18} />
+                      125
+                    </button>
+                    <button className="flex items-center gap-2 text-black font-manrope text-xs font-medium">
+                      <ShareFat size={18} />
+                      Responder
+                    </button>
+                  </footer>
+                </div>
+              </div>
+
+              <div className="w-full flex items-center justify-center">
+                <Button
+                  variant="tertiary"
+                  className="flex items-center gap-[10px] text-black"
+                >
+                  Carregar mais
+                  <CaretDown
+                    size={16}
+                    className="text-orange-200"
+                    weight="bold"
+                  />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
           ADS
