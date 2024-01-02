@@ -262,11 +262,11 @@ export function Footer() {
           </p>
 
           <div className="flex gap-3 flex-col md:flex-row md:items-center">
-            <p className="text-sm font-normal flex items-center gap-1">
+            <p className="text-sm font-normal text-white flex items-center gap-1">
               Develop by: <Image alt="" src={Autis} width={16} />
               autis.com.br
             </p>
-            <p className="text-sm font-normal flex items-center gap-1">
+            <p className="text-sm font-normal text-white flex items-center gap-1">
               Design by: <Image alt="" src={Insany} /> Insany.Design
             </p>
           </div>
