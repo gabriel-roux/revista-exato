@@ -684,7 +684,7 @@ export default function SlugPage() {
 
             <div className="flex items-center gap-2">
               <button className="text-gray-200">
-                <ArrowCircleLeft size={28} />
+                <ArrowCircleLeft weight="light" size={28} />
               </button>
               <div className="w-[152px] h-[85px] bg-gray-100 rounded-lg flex justify-center items-center">
                 1/7
@@ -708,7 +708,7 @@ export default function SlugPage() {
                 7/7
               </div>
               <button className="text-gray-200">
-                <ArrowCircleRight size={28} />
+                <ArrowCircleRight weight="light" size={28} />
               </button>
             </div>
           </div>
