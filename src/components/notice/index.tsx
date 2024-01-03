@@ -128,7 +128,9 @@ export function Notice({
                 {formatDate(createdAt)}
               </span>
             </small>
-            <h2 className="text-black text-2xl md:text-3xl">{title}</h2>
+            <h2 className="text-black text-2xl md:text-3xl md:leading-[150%!important]">
+              {title}
+            </h2>
             <p className="text-gray-100 text-base md:inline-block hidden">
               {description}
             </p>
