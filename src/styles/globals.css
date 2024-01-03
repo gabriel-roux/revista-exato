@@ -134,5 +134,5 @@ p {
 }
 
 .li-noticia:hover svg {
-  fill: #F24D00;
+  fill: #F24D00 !important;
 }
