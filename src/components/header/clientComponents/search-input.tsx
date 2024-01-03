@@ -17,7 +17,7 @@ export function SearchSection() {
 
   return (
     <>
-      <div className="w-full h-[48px] px-4 md:px-0 overflow-hidden">
+      <div className="w-full h-[50px] px-4 md:px-0 overflow-hidden">
         <div className="md:max-w-[1216px] mx-auto flex flex-row-reverse md:flex-row justify-between items-center">
           <div className="flex items-center justify-start gap-[12px]">
             <MagnifyingGlass
