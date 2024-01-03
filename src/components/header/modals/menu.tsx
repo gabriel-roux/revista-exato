@@ -9,7 +9,7 @@ import FacebookLogo from '@/components/icons/facebook'
 import TwitterLogo from '@/components/icons/twitter'
 import YoutubeLogo from '@/components/icons/youtube'
 import Autis from '@/assets/autis.png'
-import Insany from '@/assets/insany.png'
+import Insany from '@/assets/insany.svg'
 
 interface MenuProps {
   closeMenu: () => void

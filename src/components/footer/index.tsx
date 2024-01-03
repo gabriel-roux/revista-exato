@@ -7,7 +7,7 @@ import TwitterLogo from '@/components/icons/twitter'
 import YoutubeLogo from '@/components/icons/youtube'
 
 import Autis from '@/assets/autis.png'
-import Insany from '@/assets/insany.png'
+import Insany from '@/assets/insany.svg'
 import { FooterModal } from './modal'
 
 export function Footer() {

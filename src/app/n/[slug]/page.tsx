@@ -113,7 +113,7 @@ export default function SlugPage() {
       <div className="w-full h-[312px] md:h-[612px] bg-gray-100 mt-7"></div>
 
       <section className="overflow-hidden w-full md:max-w-[1215px] mx-auto mt-2 px-4 md:p-0">
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center mt-4">
           <div className="flex items-start gap-3 flex-col md:flex-row">
             <small
               className={`text-gray-200 text-xs font-medium font-manrope flex items-center`}
@@ -197,23 +197,23 @@ export default function SlugPage() {
                 </h2>
 
                 <ul className="flex flex-col gap-6">
-                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={24} weight="bold" /> A história de sucesso da
-                    Oncoclínicas&Co. na promoção do aprendizado corporativo
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-8 text-gray-200 font-semibold font-manrope">
+                    <Dot /> A história de sucesso da Oncoclínicas&Co. na
+                    promoção do aprendizado corporativo
                   </li>
-                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={24} weight="bold" />
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-8 text-gray-200 font-semibold font-manrope">
+                    <Dot />
                     Em nova campanha, a Renner acompanha a vida de uma mulher
                     dos 8 aos 80 anos
                   </li>
-                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={24} weight="bold" />
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-8 text-gray-200 font-semibold font-manrope">
+                    <Dot />
                     Ford abre inscrições para formação gratuita em tecnologia;
                     saiba como participar
                   </li>
-                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={24} weight="bold" /> A história de sucesso da
-                    Oncoclínicas&Co. na promoção do aprendizado corporativo
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-8 text-gray-200 font-semibold font-manrope">
+                    <Dot /> A história de sucesso da Oncoclínicas&Co. na
+                    promoção do aprendizado corporativo
                   </li>
                 </ul>
               </div>
