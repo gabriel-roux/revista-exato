@@ -48,7 +48,11 @@ export default function Comunidade() {
             className="flex items-center gap-[10px] text-black pl-[0!important]"
           >
             Ver todos
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </div>
         <div className="flex flex-col gap-6 min-w-[286px]">
@@ -90,7 +94,11 @@ export default function Comunidade() {
             className="flex items-center gap-[10px] text-black pl-[0!important]"
           >
             Ver todos
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </div>
         <div className="flex flex-col gap-6 min-w-[286px]">
@@ -134,7 +142,11 @@ export default function Comunidade() {
             className="flex items-center gap-[10px] text-black pl-[0!important]"
           >
             Ver todos
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </div>
       </div>

@@ -66,7 +66,7 @@ export function Livro() {
         className="w-full flex items-center justify-center gap-[10px]"
       >
         Comprar
-        <CaretRight size={16} className="text-white" weight="bold" />
+        <CaretRight size={16} className="text-white" weight="regular" />
       </Button>
     </div>
   )

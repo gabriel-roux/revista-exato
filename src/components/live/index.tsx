@@ -4,7 +4,7 @@ import Microphone from '@/components/icons/microphone'
 
 export default function LiveNotice() {
   return (
-    <div className="w-[380px] h-[444px] rounded-2xl bg-gray-700 p-4">
+    <div className="w-[380px] h-[444px] rounded-2xl bg-gray-700 p-4 mx-auto">
       <div className="w-full h-[200px] rounded-lg relative bg-gray-200">
         <BroadCastTag />
       </div>

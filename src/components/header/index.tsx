@@ -62,7 +62,7 @@ export function Header() {
         </p>
 
         <Button variant="secondary" size="md">
-          Assine a Exato <CaretRight size={16} weight="bold" />
+          Assine a Exato <CaretRight size={16} weight="regular" />
         </Button>
       </div>
 

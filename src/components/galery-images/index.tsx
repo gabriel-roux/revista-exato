@@ -80,8 +80,8 @@ export function ImagesGalery() {
   }
 
   const calcCarouselPosition = () => {
-    const imageWidth = isMobile ? 359 * selectedImage - 16 : 190 // Largura da imagem não selecionada
-    const selectedImageWidth = isMobile ? 355 : 800 // Largura da imagem selecionada
+    const imageWidth = isMobile ? 385 * selectedImage : 190 // Largura da imagem não selecionada
+    const selectedImageWidth = 800 // Largura da imagem selecionada
 
     let offset = selectedImage === 0 ? 305 : selectedImage >= 5 ? 420 : 350
     // Calculando o deslocamento até a imagem selecionada
@@ -94,7 +94,7 @@ export function ImagesGalery() {
     return isMobile
       ? selectedImage === 0
         ? 'translateX(16px)'
-        : `translateX(-${imageWidth}px)`
+        : `translateX(-${imageWidth - 16}px)`
       : `translateX(calc(50% - ${offset}px - ${centerOffset}px))`
   }
 
@@ -195,7 +195,7 @@ export function ImagesGalery() {
               <CaretLeft
                 size={24}
                 onClick={prevImage}
-                weight="bold"
+                weight="regular"
                 className="text-gray-200 transition-all duration-200 hover:text-orange-200"
               />
             </button>
@@ -207,7 +207,7 @@ export function ImagesGalery() {
               <CaretRight
                 size={24}
                 onClick={nextImage}
-                weight="bold"
+                weight="regular"
                 className="text-gray-700 transition-all duration-200 hover:text-orange-200"
               />
             </button>

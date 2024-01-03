@@ -21,7 +21,7 @@ export function GoToTop() {
     >
       <CaretUp
         size={18}
-        weight="bold"
+        weight="regular"
         className={`transform transition-all duration-500`}
       />
       <span

@@ -23,7 +23,7 @@ export default function Videos() {
           className="flex items-center gap-[10px] p-[0!important]"
         >
           Ver todos
-          <CaretRight size={16} className="text-orange-200" weight="bold" />
+          <CaretRight size={16} className="text-orange-200" weight="regular" />
         </Button>
       </header>
 

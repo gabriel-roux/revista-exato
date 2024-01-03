@@ -29,7 +29,11 @@ export default function Podcasts() {
               Ouça outros podcasts aqui
             </span>
             <span className="md:hidden">Ver todos</span>
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </header>
 

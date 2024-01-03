@@ -29,21 +29,21 @@ export function Newsletter(
             chegará diretamente em sua caixa de entrada.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-4 max-w-[890px]">
+        <div className="flex flex-col md:flex-row gap-4 md:max-w-[890px]">
           <input
             type="text"
             placeholder="Nome"
-            className="w-full max-w-[350px] h-[54px] px-4 bg-gray-100 rounded-md text-white placeholder-gray-300 font-manrope transition-all duration-200 outline-0 border-0 focus:shadow-input"
+            className="w-full md:max-w-[350px] h-[54px] px-4 bg-gray-100 rounded-md text-white placeholder-gray-300 font-manrope transition-all duration-200 outline-0 border-0 focus:shadow-input"
           />
           <input
             type="email"
             placeholder="Email"
-            className="w-full max-w-[350px] h-[54px] px-4 bg-gray-100 rounded-md text-white placeholder-gray-300 font-manrope transition-all duration-200 outline-0 border-0 focus:shadow-input"
+            className="w-full md:max-w-[350px] h-[54px] px-4 bg-gray-100 rounded-md text-white placeholder-gray-300 font-manrope transition-all duration-200 outline-0 border-0 focus:shadow-input"
           />
           <Button
             variant="secondary"
             size="lg"
-            className="flex items-center justify-center gap-2"
+            className="w-full md:w-[170px] flex items-center justify-center gap-2 h-[54px]"
           >
             Inscrever <CaretRight size={20} />
           </Button>

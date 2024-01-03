@@ -3,6 +3,8 @@
 import { differenceInDays, differenceInHours, format, parseISO } from 'date-fns'
 import { useState } from 'react'
 import LockKeyOpen from '../icons/lock'
+import Image from 'next/image'
+import Faixa from '@/assets/faixa.svg'
 
 interface SugestionProps {
   name: string
@@ -46,24 +48,35 @@ export default function Sugestion({
         </small>
 
         {isFree && (
-          <span
-            className={`absolute rounded-l-md w-[35px] h-[38px] bg-gray-100 ${
-              isHover
-                ? 'bg-orange-200 rounded-l-none w-[84px] after:content-[""] after:absolute after:border-t-[19px] after:border-b-[19px] after:border-l-[19px] after:border-t-orange-200 after:border-b-orange-200 after:border-l-[transparent] after:top-1/2 after:-translate-y-1/2 after:left-[-18px] after:transition-all ease after:duration-[400ms]'
-                : 'after:opacity-0'
-            } flex items-center justify-center gap-1 right-0 transition-all duration-500`}
-          >
-            <LockKeyOpen />
-            {
-              <span
-                className={`text-sm font-semibold ${
-                  isHover ? 'text-white' : 'opacity-0 absolute'
-                } transition-all duration-500`}
-              >
-                Gratuito
-              </span>
-            }
-          </span>
+          <div className="absolute right-0">
+            <span
+              className={`rounded-l-md w-[35px] h-[38px] bg-gray-100 ${
+                isHover ? 'bg-orange-200 rounded-l-none w-[89px]' : ''
+              } flex items-center justify-center gap-1 transition-all duration-500`}
+            >
+              <LockKeyOpen />
+              {
+                <span
+                  className={`text-sm font-semibold ${
+                    isHover ? 'text-white' : 'opacity-0 absolute'
+                  } transition-all duration-500`}
+                >
+                  Gratuito
+                </span>
+              }
+            </span>
+            <Image
+              src={Faixa}
+              alt="Faixa"
+              width={30}
+              height={15}
+              className={`absolute bottom-0 h-[38px] ${
+                isHover
+                  ? 'w-[89px] right-[3.2rem] opacity-100'
+                  : 'right-6 opacity-0'
+              } transition-all duration-500`}
+            />
+          </div>
         )}
       </header>
 

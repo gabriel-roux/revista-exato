@@ -20,7 +20,11 @@ export default function Parceiros() {
           </h2>
           <Button variant="tertiary" className="flex items-center gap-[10px]">
             Ver todos
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </header>
 

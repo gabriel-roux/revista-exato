@@ -31,7 +31,7 @@ export function Country() {
         className="font-ptserif text-gray-200 font-normal text-[32px] flex items-center gap-3 hover:text-orange-200 transition-all duration-150 cursor-pointer"
       >
         {selectedCountry}{' '}
-        <CaretDown size={16} weight="bold" className="text-orange-200" />
+        <CaretDown size={16} weight="regular" className="text-orange-200" />
       </p>
 
       {openExato && (
@@ -48,7 +48,7 @@ export function Country() {
                 Brasil
               </p>
               {selectedCountry === 'Brasil' && (
-                <Check size={16} weight="bold" className="text-orange-200" />
+                <Check size={16} weight="regular" className="text-orange-200" />
               )}
             </li>
             <li
@@ -60,7 +60,7 @@ export function Country() {
               </p>
 
               {selectedCountry === 'Estados Unidos' && (
-                <Check size={16} weight="bold" className="text-orange-200" />
+                <Check size={16} weight="regular" className="text-orange-200" />
               )}
             </li>
           </ul>

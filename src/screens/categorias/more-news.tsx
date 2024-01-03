@@ -44,7 +44,7 @@ export default function MoreNews() {
           className="flex items-center gap-[10px] text-black"
         >
           Carregar mais
-          <CaretDown size={16} className="text-orange-200" weight="bold" />
+          <CaretDown size={16} className="text-orange-200" weight="regular" />
         </Button>
       </div>
     </section>

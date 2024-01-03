@@ -29,7 +29,7 @@ export function Exato() {
         onClick={() => setOpenExato(true)}
         className="font-manrope font-medium text-sm flex items-center gap-[6px] hover:text-orange-500 transition-all duration-150 cursor-pointer"
       >
-        A Exato <CaretDown size={14} weight="bold" />
+        A Exato <CaretDown size={14} weight="regular" />
       </p>
 
       {openExato && (

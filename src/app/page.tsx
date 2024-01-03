@@ -26,7 +26,7 @@ export default function Home() {
       <section className="w-full border-y-2 border-orange-200 h-[396px] md:h-[506px] md:py-[56px] py-6 px-5 md:px-0 bg-black">
         <div className="w-full mx-auto max-w-[1215px] flex flex-col gap-8">
           <header className="hidden md:flex justify-between items-center">
-            <h2 className="font-ptserif font-bold text-2xl flex items-center gap-2 tracking-[-2%]">
+            <h2 className="font-ptserif font-bold text-2xl flex items-center gap-2 text-white tracking-[-2%]">
               <BookBookmark
                 size={24}
                 weight="fill"
@@ -40,7 +40,11 @@ export default function Home() {
               className="flex items-center gap-[10px] text-white"
             >
               Ver todas as edições
-              <CaretRight size={16} className="text-orange-200" weight="bold" />
+              <CaretRight
+                size={16}
+                className="text-orange-200"
+                weight="regular"
+              />
             </Button>
           </header>
 

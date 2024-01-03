@@ -46,7 +46,7 @@ export function GaleryBox({
         selectedImage === id
           ? 'md:min-w-[800px]'
           : 'md:min-w-[190px] cursor-pointer'
-      } h-[193px] min-w-[335px] md:h-[460px] relative rounded-lg bg-gray-200 flex items-center justify-center transition-all duration-500`}
+      } h-[193px] min-w-[360px] md:h-[460px] relative rounded-lg bg-gray-200 flex items-center justify-center transition-all duration-500`}
     >
       <div
         className={`absolute ${

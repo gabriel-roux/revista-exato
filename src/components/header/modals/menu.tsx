@@ -23,7 +23,7 @@ export default function Menu({ closeMenu }: MenuProps) {
           <ExatoLogo className="w-[102px] h-[35px] fill-orange-200" />
 
           <Button onClick={closeMenu} variant="tertiary" size="md">
-            <X size={24} weight="bold" className="text-gray-300" />
+            <X size={24} weight="regular" className="text-gray-300" />
           </Button>
         </header>
 

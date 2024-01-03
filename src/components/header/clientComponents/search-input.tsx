@@ -23,7 +23,7 @@ export function SearchSection() {
             <MagnifyingGlass
               onClick={() => setFocused(true)}
               size={24}
-              weight="bold"
+              weight="regular"
               className="text-orange-100"
             />
             <input
@@ -66,7 +66,7 @@ export function SearchSection() {
               Login
             </Button>
             <Button variant="secondary" size="md">
-              Assine <CaretRight size={16} weight="bold" />
+              Assine <CaretRight size={16} weight="regular" />
             </Button>
           </div>
         </div>

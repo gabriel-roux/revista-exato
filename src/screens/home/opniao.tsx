@@ -11,11 +11,7 @@ export default function Opniao() {
       <div className="w-full max-w-[1215px] mx-auto flex flex-col gap-6">
         <header className="flex justify-between">
           <h2 className="text-[32px] flex items-center gap-4 font-ptserif font-bold text-white">
-            <Quotes
-              size={32}
-              weight="fill"
-              className="text-orange-200 transform rotate-180"
-            />
+            <Quotes />
             Opinião
           </h2>
 
@@ -25,7 +21,11 @@ export default function Opniao() {
               className="flex items-center gap-[10px] text-white"
             >
               Ver todos
-              <CaretRight size={16} className="text-orange-200" weight="bold" />
+              <CaretRight
+                size={16}
+                className="text-orange-200"
+                weight="regular"
+              />
             </Button>
 
             <Image
@@ -40,7 +40,7 @@ export default function Opniao() {
         </header>
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
           <div className="md:min-w-[496px] relative z-10 pt-6 flex flex-col gap-8 justify-between md:h-[376px]">
-            <h2 className="text-[24px] md:text-[32px] font-normal">
+            <h2 className="text-[24px] md:text-[32px] font-normal text-white">
               O governo, policitamente fragilizado, teme que o desgaste de Lula
               se reflita negativamente na operação política.
             </h2>

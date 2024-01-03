@@ -166,7 +166,7 @@ export function WeatherModal() {
     <div className="relative">
       <p
         onClick={() => setOpenWeather(true)}
-        className="font-manrope font-medium text-sm flex items-center gap-[6px] hover:text-orange-500 transition-all duration-150 cursor-pointer"
+        className="font-manrope font-medium text-sm flex items-center gap-[6px] text-white hover:text-orange-500 transition-all duration-150 cursor-pointer"
       >
         <Image src={Icon} alt="Weather icon" width={24} height={24} />
         {(weather.location.country === 'Brazil'
@@ -179,7 +179,7 @@ export function WeatherModal() {
           ' - ' +
           Math.ceil(weather.current.temp_c) +
           '° '}
-        <CaretDown size={14} weight="bold" />
+        <CaretDown size={14} weight="regular" />
       </p>
 
       {openWeather && (
@@ -197,7 +197,11 @@ export function WeatherModal() {
               onClick={() => setFocusInput(true)}
               className="border-gray-500 cursor-pointer w-[220px] transition-all text-sm duration-200 font-normal hover:border-gray-400 relative h-11 px-4 py-[10px] gap-2 flex items-center rounded-lg border-[1.5px] text-gray-300"
             >
-              <Magnifying size={16} weight="bold" className="text-gray-400" />
+              <Magnifying
+                size={16}
+                weight="regular"
+                className="text-gray-400"
+              />
               <span
                 style={{
                   fontWeight: '400 !important',
@@ -216,7 +220,7 @@ export function WeatherModal() {
                   >
                     <Magnifying
                       size={16}
-                      weight="bold"
+                      weight="regular"
                       className="text-gray-400"
                     />
                     <input

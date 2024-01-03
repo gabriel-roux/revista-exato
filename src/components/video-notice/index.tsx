@@ -179,7 +179,7 @@ export function VideoNotice({
                 {formatDate(createdAt)}
               </span>
             </small>
-            <h2 className={`text-black font-semibold text-lg md:text-[32px]`}>
+            <h2 className={`text-black font-semibold text-lg md:text-3xl`}>
               {title}
             </h2>
             {description && (

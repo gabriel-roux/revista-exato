@@ -22,7 +22,11 @@ export function Galeria() {
             className="flex items-center gap-[10px] text-white"
           >
             Ver outras galerias
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </header>
 

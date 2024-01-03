@@ -95,7 +95,7 @@ export function BreakingNews() {
               {formatTime(news[currentIndex].createdAt)}
             </p>
             <CaretLeft
-              weight="bold"
+              weight="regular"
               size={16}
               className={`text-orange-200 cursor-pointer ${
                 isPrevDisabled ? 'opacity-50' : ''
@@ -103,7 +103,7 @@ export function BreakingNews() {
               onClick={!isPrevDisabled ? prevNews : undefined}
             />
             <CaretRight
-              weight="bold"
+              weight="regular"
               size={16}
               className={`text-orange-200 cursor-pointer ${
                 isNextDisabled ? 'opacity-50' : ''
@@ -126,7 +126,7 @@ export function BreakingNews() {
             {formatTime(news[currentIndex].createdAt)}
           </p>
           <CaretLeft
-            weight="bold"
+            weight="regular"
             size={16}
             className={`text-orange-200 cursor-pointer ${
               isPrevDisabled ? 'opacity-50' : ''
@@ -134,7 +134,7 @@ export function BreakingNews() {
             onClick={!isPrevDisabled ? prevNews : undefined}
           />
           <CaretRight
-            weight="bold"
+            weight="regular"
             size={16}
             className={`text-orange-200 cursor-pointer ${
               isNextDisabled ? 'opacity-50' : ''

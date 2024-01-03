@@ -18,7 +18,11 @@ export default function Colunistas() {
             className="flex items-center gap-[10px] text-white"
           >
             Ver todos
-            <CaretRight size={16} className="text-orange-200" weight="bold" />
+            <CaretRight
+              size={16}
+              className="text-orange-200"
+              weight="regular"
+            />
           </Button>
         </header>
 

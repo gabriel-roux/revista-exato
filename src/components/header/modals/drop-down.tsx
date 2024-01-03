@@ -36,7 +36,8 @@ export function DropDown({ menu, items }: DropDownProps) {
           open && 'text-orange-200'
         } transition-all duration-300 hover:text-orange-200 flex items-center gap-[6px]`}
       >
-        {menu} <CaretDown size={16} weight="bold" className="text-orange-200" />
+        {menu}{' '}
+        <CaretDown size={16} weight="regular" className="text-orange-200" />
       </button>
 
       {open && (

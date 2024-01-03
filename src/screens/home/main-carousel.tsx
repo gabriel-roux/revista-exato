@@ -139,14 +139,14 @@ export default function EditionCarousel() {
             <button onClick={prevPage} disabled={currentPage === 0}>
               <CaretLeft
                 size={24}
-                weight="bold"
+                weight="regular"
                 className="text-gray-200 transition-all duration-200 hover:text-orange-200"
               />
             </button>
             <button onClick={nextPage} disabled={currentPage >= maxPage}>
               <CaretRight
                 size={24}
-                weight="bold"
+                weight="regular"
                 className="text-gray-700 transition-all duration-200 hover:text-orange-200"
               />
             </button>

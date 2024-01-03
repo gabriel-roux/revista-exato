@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import ShareNetwork from '@/components/icons/share'
-import Link from '@/components/icons/link'
+import LinkIcon from '@/components/icons/link'
 import Archive from '@/components/icons/archive'
 import { Velocity } from '@/components/video-notice/velocity'
 import PauseCircle from '@/components/icons/pause'
@@ -23,6 +23,8 @@ import ArrowCircleRight from '@/components/icons/arrow-circle-right'
 import MoreNews from '@/screens/categorias/more-news'
 import Heart from '@/components/icons/heart'
 import ShareFat from '@/components/icons/share-fat'
+import Link from 'next/link'
+import SpeakerHigh from '@/components/icons/speaker-high'
 
 export default function SlugPage() {
   return (
@@ -40,7 +42,7 @@ export default function SlugPage() {
           </small>
 
           <h1
-            className={`text-black text-2xl md:text-5xl font-manrope font-bold text-center`}
+            className={`text-black text-2xl md:text-5xl md:leading-[140%!important] font-manrope font-bold text-center`}
           >
             Educação cripto é a chave para adoção e um pilar no desenvolvimento
             da indústria, afirma Binance
@@ -68,7 +70,12 @@ export default function SlugPage() {
             <small
               className={`text-black text-sm font-medium font-manrope flex items-center`}
             >
-              Por Priscila cardoso
+              <span>
+                Por{' '}
+                <Link href="#" className="underline">
+                  Priscila cardoso
+                </Link>
+              </span>
               <span
                 className={`hidden md:inline-block w-[6px] h-[6px] bg-gray-400 rounded-full ml-2 mr-2`}
               ></span>
@@ -97,7 +104,7 @@ export default function SlugPage() {
               <Archive />
             </button>
             <button className="text-orange-200">
-              <Link size={24} weight="bold" />
+              <LinkIcon size={24} weight="regular" />
             </button>
           </div>
         </div>
@@ -114,12 +121,12 @@ export default function SlugPage() {
               Legenda: O surgimento das criptomoedas trouxe uma mudança de
               paradigma no mundo financeiro...
             </small>
-            <small
-              className={`text-gray-200 text-xs font-manrope flex items-center`}
-            >
-              Foto: Globo/João Santos
-            </small>
           </div>
+          <small
+            className={`text-gray-200 text-xs font-manrope flex items-center`}
+          >
+            Foto: Globo/João Santos
+          </small>
         </div>
 
         <div className="w-[335px] mx-auto h-[45px] md:w-full flex justify-center items-center my-[48px] md:my-[72px] md:h-[156px] bg-gray-400 rounded-lg">
@@ -133,8 +140,8 @@ export default function SlugPage() {
                 Ouça este conteúdo:
               </p>
 
-              <footer className="flex items-center gap-1">
-                <div className="flex items-center gap-1">
+              <footer className="flex items-center gap-1 px-4 py-1 rounded-lg border border-gray-500">
+                <div className="flex items-center gap-2">
                   <PauseCircle
                     size={30}
                     className="text-orange-200"
@@ -147,21 +154,14 @@ export default function SlugPage() {
                     </div>
                   </div>
 
+                  <SpeakerHigh />
                   <Velocity />
                 </div>
-
-                <span className="text-sm text-gray-200 font-normal font-manrope">
-                  04:10
-                  <span
-                    className={`inline-block w-[6px] h-[6px] bg-gray-500 rounded-full ml-2 mr-2`}
-                  ></span>
-                  20:45
-                </span>
               </footer>
             </div>
 
             <div className="flex flex-col gap-8">
-              <p className="font-manrope text-lg text-black">
+              <p className="font-manrope text-lg text-black leading-[160%!important]">
                 O surgimento das criptomoedas trouxe uma mudança de paradigma no
                 mundo financeiro. No entanto, esta nova fronteira é, muitas
                 vezes, mal compreendida, levando à apreensão e à hesitação entre
@@ -172,7 +172,7 @@ export default function SlugPage() {
                 a promover a compreensão e a adoção desta tecnologia inovadora.
               </p>
 
-              <p className="font-manrope text-lg text-black">
+              <p className="font-manrope text-lg text-black leading-[160%!important]">
                 Em momentos de recuperação de preços como se viu nas últimas
                 semanas, a busca por informações cresce acompanhando os gráficos
                 do mercado. Cada vez mais pessoas têm olhado os criptoativos
@@ -181,7 +181,7 @@ export default function SlugPage() {
                 acesso à educação sobre esta indústria é essencial.
               </p>
 
-              <p className="font-manrope text-lg text-black">
+              <p className="font-manrope text-lg text-black leading-[160%!important]">
                 É comum que pessoas não saibam o que são e como funcionam. Além
                 disso, não sabem o que é a rede blockchain e como podem se
                 beneficiar de sua tecnologia. Muitos têm a percepção de que é um
@@ -197,23 +197,23 @@ export default function SlugPage() {
                 </h2>
 
                 <ul className="flex flex-col gap-6">
-                  <li className="flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={48} /> A história de sucesso da Oncoclínicas&Co.
-                    na promoção do aprendizado corporativo
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
+                    <Dot size={24} weight="bold" /> A história de sucesso da
+                    Oncoclínicas&Co. na promoção do aprendizado corporativo
                   </li>
-                  <li className="flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={48} />
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
+                    <Dot size={24} weight="bold" />
                     Em nova campanha, a Renner acompanha a vida de uma mulher
                     dos 8 aos 80 anos
                   </li>
-                  <li className="flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={48} />
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
+                    <Dot size={24} weight="bold" />
                     Ford abre inscrições para formação gratuita em tecnologia;
                     saiba como participar
                   </li>
-                  <li className="flex items-center gap-2 text-gray-200 font-semibold font-manrope">
-                    <Dot size={48} /> A história de sucesso da Oncoclínicas&Co.
-                    na promoção do aprendizado corporativo
+                  <li className="li-noticia transition-all duration-200 flex items-center gap-2 text-gray-200 font-semibold font-manrope">
+                    <Dot size={24} weight="bold" /> A história de sucesso da
+                    Oncoclínicas&Co. na promoção do aprendizado corporativo
                   </li>
                 </ul>
               </div>
@@ -221,11 +221,7 @@ export default function SlugPage() {
               <div className="w-full h-[1px] bg-gray-500 my-4" />
 
               <div className="flex flex-col items-center justify-center gap-7">
-                <Quotes
-                  size={32}
-                  className="text-orange-200 transform rotate-180"
-                  weight="fill"
-                />
+                <Quotes />
 
                 <h2 className="text-black font-bold text-2xl text-center">
                   Desde o seu lançamento em 2018, a{' '}
@@ -273,7 +269,7 @@ export default function SlugPage() {
                 Conteúdo gratuito sobre cripto
               </p>
 
-              <p className="font-manrope text-lg text-black">
+              <p className="font-manrope text-lg text-black leading-[160%!important]">
                 A <span className="text-orange-100">Binance Academy</span>, como
                 chama o braço educacional da exchange, tem sido uma das maiores
                 e mais abrangentes coleções online de artigos sobre a indústria
@@ -321,7 +317,7 @@ export default function SlugPage() {
                 Para fomentar a formação de usuários
               </p>
 
-              <p className="font-manrope text-lg text-black">
+              <p className="font-manrope text-lg text-black leading-[160%!important]">
                 Em outubro de 2022, a Binance também lançou cursos educativos
                 gratuitos em 14 idiomas, oferecendo educação personalizada e
                 estruturada sobre blockchain e criptomoedas. Este ano, a Academy
@@ -394,7 +390,7 @@ export default function SlugPage() {
                   Ver todas{' '}
                   <CaretRight
                     size={16}
-                    weight="bold"
+                    weight="regular"
                     className="text-orange-200"
                   />
                 </Button>
@@ -568,6 +564,15 @@ export default function SlugPage() {
                   </p>
                 </div>
               </div>
+
+              <Button
+                variant="tertiary"
+                size="md"
+                className="flex items-center gap-2 my-2"
+              >
+                Ver todos{' '}
+                <CaretRight className="text-orange-200 p-0" size={20} />
+              </Button>
             </div>
 
             <div className="w-full bg-black p-8 flex flex-col gap-6">
@@ -829,7 +834,7 @@ export default function SlugPage() {
                   <CaretDown
                     size={16}
                     className="text-orange-200"
-                    weight="bold"
+                    weight="regular"
                   />
                 </Button>
               </div>
