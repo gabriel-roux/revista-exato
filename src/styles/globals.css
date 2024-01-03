@@ -133,6 +133,6 @@ p {
   color: #444444;
 }
 
-.li-noticia:hover svg {
+.li-noticia:hover svg rect {
   fill: #F24D00 !important;
 }
