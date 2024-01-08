@@ -656,6 +656,11 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -669,11 +674,6 @@ video {
 .my-\[48px\] {
   margin-top: 48px;
   margin-bottom: 48px;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .-ml-\[1px\] {
@@ -746,6 +746,10 @@ video {
 
 .mt-\[50px\] {
   margin-top: 50px;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .line-clamp-2 {
@@ -1206,14 +1210,6 @@ video {
   min-width: 332px;
 }
 
-.min-w-\[335px\] {
-  min-width: 335px;
-}
-
-.min-w-\[345px\] {
-  min-width: 345px;
-}
-
 .min-w-\[360px\] {
   min-width: 360px;
 }
@@ -1301,11 +1297,6 @@ video {
 
 .translate-x-\[-1\.5rem\] {
   --tw-translate-x: -1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-180 {
-  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1480,6 +1471,10 @@ video {
 
 .gap-\[6px\] {
   gap: 6px;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .overflow-hidden {
@@ -1817,6 +1812,10 @@ video {
      object-fit: cover;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1839,10 +1838,6 @@ video {
 
 .p-\[10px\] {
   padding: 10px;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-1 {
@@ -1888,6 +1883,11 @@ video {
 .px-\[30px\] {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-10 {
@@ -2109,10 +2109,6 @@ video {
 
 .leading-6 {
   line-height: 1.5rem;
-}
-
-.leading-\[160\%\] {
-  line-height: 160%;
 }
 
 .leading-\[160\%\!important\] {
@@ -2434,8 +2430,8 @@ p {
   color: #444444;
 }
 
-.li-noticia:hover svg {
-  color: #F24D00;
+.li-noticia:hover svg rect {
+  fill: #F24D00 !important;
 }
 
 .placeholder\:text-gray-400::-moz-placeholder {
@@ -2570,8 +2566,8 @@ p {
     height: 220px;
   }
 
-  .md\:h-\[224px\] {
-    height: 224px;
+  .md\:h-\[227px\] {
+    height: 227px;
   }
 
   .md\:h-\[230px\] {
@@ -3024,6 +3020,10 @@ p {
 
   .md\:leading-\[140\%\!important\] {
     line-height: 140% !important;
+  }
+
+  .md\:leading-\[150\%\!important\] {
+    line-height: 150% !important;
   }
 
   .md\:text-white {

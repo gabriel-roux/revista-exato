@@ -137,7 +137,7 @@ export function WeatherModal() {
 
     if (value.length > 0) {
       fetch(
-        `https://api.weatherapi.com/v1/search.json?key=419f61a8f1a14b519d7194158231412&q=${value}`,
+        `https://api.weatherapi.com/v1/search.json?key=419f61a8f1a14b519d7194158231412&q=${value}&lang=pt`,
       )
         .then((response) => response.json())
         .then((result: AutoCompleteProps[]) => {
@@ -149,7 +149,7 @@ export function WeatherModal() {
 
   useEffect(() => {
     fetch(
-      `https://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=Brasilia`,
+      `https://api.weatherapi.com/v1/current.json?lang=pt&key=419f61a8f1a14b519d7194158231412&q=Brasilia`,
     )
       .then((response) => response.json())
       .then((result: WeatherProps) => {
@@ -241,7 +241,7 @@ export function WeatherModal() {
                               setFocusInput(false)
                               setSearchTerm('')
                               fetch(
-                                `http://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=${result.name}`,
+                                `http://api.weatherapi.com/v1/current.json?key=419f61a8f1a14b519d7194158231412&q=${result.name},${result.country}&lang=pt`,
                               )
                                 .then((response) => response.json())
                                 .then((result: WeatherProps) => {

@@ -160,7 +160,7 @@ export default function SlugPage() {
               </footer>
             </div>
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-14">
               <p className="font-manrope text-lg text-black leading-[160%!important]">
                 O surgimento das criptomoedas trouxe uma mudança de paradigma no
                 mundo financeiro. No entanto, esta nova fronteira é, muitas
@@ -218,7 +218,7 @@ export default function SlugPage() {
                 </ul>
               </div>
 
-              <div className="w-full h-[1px] bg-gray-500 my-4" />
+              <div className="w-full h-[1px] bg-gray-500" />
 
               <div className="flex flex-col items-center justify-center gap-7">
                 <Quotes />
@@ -243,7 +243,7 @@ export default function SlugPage() {
                 </small>
               </div>
 
-              <div className="w-full h-[1px] bg-gray-500 my-4" />
+              <div className="w-full h-[1px] bg-gray-500" />
 
               <div className="flex flex-col gap-4">
                 <div className="w-full h-[280px] md:h-[414px] bg-gray-100 rounded-lg"></div>
@@ -601,7 +601,7 @@ export default function SlugPage() {
       </section>
 
       <section
-        className={`overflow-hidden flex flex-col md:flex-row gap-4 w-full md:max-w-[1372px] mx-auto mt-8 px-4 md:p-0`}
+        className={`overflow-hidden flex flex-col md:flex-row gap-4 w-full md:max-w-[1372px] mx-auto mt-14 px-4 md:p-0`}
       >
         <div className="flex flex-col gap-3 max-w-[100vw] md:w-[530px]">
           <div className="w-full bg-gray-100 h-[340px]" />
