@@ -14,7 +14,7 @@ export function PlanosHeader() {
           <div className="w-[1px] h-[36px] bg-gray-400 " />
 
           <p className="gap-2 text-gray-100 flex items-center font-semibold">
-            <ShieldCheck /> 100% seguro
+            <ShieldCheck /> Site 100% seguro
           </p>
         </div>
 
