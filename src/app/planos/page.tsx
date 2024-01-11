@@ -5,24 +5,25 @@ import GlobeHemisphereWest from '@/components/icons/world'
 import ChatCircles from '@/components/icons/chat-circles'
 import Medal from '@/components/icons/medal'
 import Plus from '@/components/icons/plus'
+import DuvidaComponent from '@/components/duvidas'
 
 export default function Planos() {
   return (
     <main>
-      <section className="w-full h-[1008px] bg-gray-700 py-20 flex items-center justify-start flex-col gap-20">
+      <section className="w-full md:h-[1008px] bg-gray-700 py-20 flex items-center justify-start flex-col gap-20">
         <div className="flex flex-col gap-[14px] items-center">
-          <h1 className="text-2xl text-black font-bold text-center">
+          <h1 className="text-xl md:text-2xl text-black font-bold text-center">
             Una-se a nós para uma jornada de descoberta, informação e inclusão.
           </h1>
 
-          <p className="text-base text-gray-200 text-center max-w-[660px]">
+          <p className="text-sm md:text-base text-gray-200 text-center max-w-[660px]">
             Ao assinar a Revista EXATO, você terá acesso a conteúdo relevante e
             acessível, projetado para proporcionar uma experiência de leitura
             agradável e informativa.
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 max-w-[1220px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-4 max-w-[1220px] mx-auto">
           <div className="w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8">
             <div className="flex flex-col gap-1 px-8">
               <h2 className="text-lg text-black font-bold text-left">
@@ -93,13 +94,14 @@ export default function Planos() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 px-8">
+            <div className="flex items-center gap-2 px-8 relative">
+              <p className="absolute text-gray-100 line-through -top-[14px]">
+                De $23.31
+              </p>
               <p className="font-semibold text-gray-100 font-manrope text-base">
                 $
               </p>
-
               <h2 className="text-orange-200 text-[44px] font-bold">22.20</h2>
-
               <p className="text-gray-100 font-manrope text-xs font-medium">
                 /Por mês
               </p>
@@ -158,7 +160,10 @@ export default function Planos() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 px-8">
+              <div className="flex items-center gap-2 px-8 relative">
+                <p className="absolute text-gray-100 line-through -top-[14px]">
+                  De $46.31
+                </p>
                 <p className="font-semibold text-gray-100 font-manrope text-base">
                   $
                 </p>
@@ -265,18 +270,18 @@ export default function Planos() {
 
       <section className="w-full mt-[90px] flex flex-col gap-16">
         <div className="flex flex-col gap-[14px] items-center">
-          <h2 className="text-2xl text-black font-bold text-center">
+          <h2 className="text-xl md:text-2xl text-black font-bold text-center">
             Por que assinar a Exato?
           </h2>
 
-          <p className="text-base text-gray-200 text-center max-w-[550px]">
+          <p className="text-sm md:text-base text-gray-200 text-center max-w-[550px]">
             Descubra um mundo de informações precisas e análises aprofundadas{' '}
             <b>Torne-se um assinante da Exato hoje mesmo!</b>
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 max-w-[1220px] mx-auto">
-          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:max-w-[1220px] mx-auto">
+          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl max-w-[90%] mx-auto">
             <GlobeHemisphereWest
               className="text-orange-200"
               size={40}
@@ -296,7 +301,7 @@ export default function Planos() {
               </p>
             </div>
           </div>
-          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl">
+          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl max-w-[90%] mx-auto">
             <ChatCircles className="fill-orange-200" />
 
             <div className="flex flex-col gap-[14px] items-start">
@@ -311,7 +316,7 @@ export default function Planos() {
               </p>
             </div>
           </div>
-          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl">
+          <div className="p-8 bg-gray-700 flex flex-col gap-8 rounded-2xl max-w-[90%] mx-auto">
             <Medal className="fill-orange-200" />
 
             <div className="flex flex-col gap-[14px] items-start">
@@ -333,64 +338,25 @@ export default function Planos() {
       <section className="w-full mt-[90px] mb-[150px] flex flex-col gap-16">
         <h2 className="text-2xl text-black font-bold text-center">Dúvidas</h2>
 
-        <div className="max-w-[800px] w-full mx-auto">
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como funciona a assinatura do Plano Mensal?
-            </p>
+        <div className="md:max-w-[800px] max-w-[90%] w-full mx-auto">
+          <DuvidaComponent title="Como funciona a assinatura do Plano Mensal?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como é feita a cobrança da assinatura?
-            </p>
+          <DuvidaComponent title="Como é feita a cobrança da assinatura?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Quanto tempo leva para o acesso digital ser liberado após a
-              assinatura?
-            </p>
+          <DuvidaComponent
+            title="Quanto tempo leva para o acesso digital ser liberado após a
+              assinatura?"
+          />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como funciona a renovação da assinatura?
-            </p>
+          <DuvidaComponent title="Como funciona a renovação da assinatura?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Quando pode ocorrer um reajuste no preço da mensalidade?
-            </p>
+          <DuvidaComponent title="Quando pode ocorrer um reajuste no preço da mensalidade?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como funciona o desconto com os parceiros?
-            </p>
+          <DuvidaComponent title="Como funciona o desconto com os parceiros?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-y border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como funciona o acesso aos cursos?
-            </p>
+          <DuvidaComponent title="Como funciona o acesso aos cursos?" />
 
-            <Plus className="text-gray-200" size={16} />
-          </div>
-          <div className="w-full h-[100px] flex justify-between items-center border-t border-gray-500 cursor-pointer">
-            <p className="text-base text-gray-200 text-left">
-              Como posso cancelar minha assinatura?
-            </p>
-
-            <Plus className="text-gray-200" size={16} />
-          </div>
+          <DuvidaComponent title="Como posso cancelar minha assinatura?" />
         </div>
       </section>
     </main>

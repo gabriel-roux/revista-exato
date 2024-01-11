@@ -7,18 +7,18 @@ import Insany from '@/assets/insany-black.svg'
 
 export function PlanosFooter() {
   return (
-    <footer className="w-full h-[120px] border-t border-gray-500 flex items-center">
+    <footer className="w-full h-[120px] border-t border-gray-500 flex items-center p-4 md:p-0">
       <div className="w-full max-w-[1216px] mx-auto flex justify-between items-center">
         <ExatoLogo className="w-[105px] h-[36px] fill-gray-100" />
 
         <div>
-          <p className="text-xs text-gray-100 font-medium transition-all duration-200 hover:text-orange-200 flex items-center gap-2">
+          <p className="text-xs text-gray-100 font-medium transition-all duration-200 hover:text-orange-200 flex items-center gap-2 hidden md:inline-block">
             <Envelope className="fill-orange-200" />
             suporte@revistaexato.com
           </p>
         </div>
 
-        <p className="text-gray-100 md:text-gray-100 text-xs font-medium">
+        <p className="text-gray-100 md:text-gray-100 text-xs font-medium hidden md:inline-block">
           ©2023. Todos os direitos reservados. Revista Exato, Inc.
         </p>
 

@@ -110,7 +110,7 @@ export default function SlugPage() {
         </div>
       </section>
 
-      <div className="w-full h-[312px] md:h-[612px] bg-gray-100 mt-7"></div>
+      <div className="w-full max-w-[98%] mx-auto h-[312px] md:h-[612px] bg-gray-100 mt-7"></div>
 
       <section className="overflow-hidden w-full md:max-w-[1215px] mx-auto mt-2 px-4 md:p-0">
         <div className="w-full flex justify-between items-center mt-4">
