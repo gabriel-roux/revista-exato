@@ -7,7 +7,7 @@ import { ReactNode } from 'react'
 
 export default function Template({ children }: { children: ReactNode }) {
   const pathname = usePathname()
-  const isSubscriptionPage = pathname === '/planos'
+  const isSubscriptionPage = pathname.includes('/planos')
 
   return (
     <>

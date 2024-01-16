@@ -5,9 +5,9 @@ import MoreNews from '@/screens/categorias/more-news'
 
 export default function CategoryPage() {
   return (
-    <main className="pt-16 border-t border-gray-500">
+    <main className="pt-8 md:pt-16 border-t border-gray-500">
       <section className="overflow-hidden w-full max-w-[1215px] mx-auto px-4 md:p-0">
-        <header className="hidden md:flex justify-between items-center mb-8">
+        <header className="flex justify-between items-center mb-8">
           <h2 className="font-ptserif font-bold text-black text-[2rem] flex items-center gap-2">
             <GlobeHemisphereWest
               size={32}

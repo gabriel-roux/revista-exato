@@ -23,8 +23,8 @@ export default function Planos() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-4 max-w-[1220px] mx-auto">
-          <div className="w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-4 max-w-[1220px] mx-auto p-5 md:p-0">
+          <div className="w-full md:w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8">
             <div className="flex flex-col gap-1 px-8">
               <h2 className="text-lg text-black font-bold text-left">
                 Plano mensal
@@ -77,7 +77,7 @@ export default function Planos() {
               <CaretRight weight="bold" className="text-white" />
             </Button>
           </div>
-          <div className="w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8">
+          <div className="w-full md:w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8">
             <div className="flex flex-col gap-1 px-8">
               <div className="flex items-center gap-4">
                 <h2 className="text-lg text-black font-bold text-left">
@@ -143,7 +143,7 @@ export default function Planos() {
                 MELHOR OFERTA! 10$ OFF
               </p>
             </header>
-            <div className="w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8 relative z-10">
+            <div className="w-full md:w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-8 py-8 relative z-10">
               <div className="flex flex-col gap-1 px-8">
                 <div className="flex items-center gap-4">
                   <h2 className="text-lg text-black font-bold text-left">
@@ -210,7 +210,7 @@ export default function Planos() {
             <header className="absolute -top-[34px] w-full h-[60px] bg-black rounded-lg flex items-start justify-center py-[10px]">
               <p className="text-white text-xs font-bold">MAIS COMPLETO!</p>
             </header>
-            <div className="w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-5 py-8 relative z-10">
+            <div className="w-full md:w-[295px] h-[610px] bg-[#fff] rounded-lg flex flex-col gap-5 py-8 relative z-10">
               <div className="flex flex-col gap-1 px-8">
                 <h2 className="text-lg text-black font-bold text-left">
                   Platinum anual
