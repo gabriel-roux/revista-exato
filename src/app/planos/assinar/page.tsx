@@ -9,12 +9,12 @@ import StepForm from './forms'
 export default function AssinarPage() {
   return (
     <main>
-      <section className="w-full bg-gray-700 py-20 flex items-center justify-start flex-col gap-20">
-        <div className="w-full max-w-[1220px] mx-auto flex items-start justify-center gap-10">
+      <section className="w-full bg-gray-700 py-20 flex items-center justify-start flex-co px-4 md:px-0 gap-20">
+        <div className="w-full md:max-w-[1220px] mx-auto flex items-start flex-col-reverse md:flex-row justify-center gap-10">
           <StepForm />
 
-          <div className="w-[485px] bg-[#FFF] rounded-lg sticky top-14">
-            <div className="w-full p-10 border-b border-gray-500">
+          <div className="w-full md:w-[485px] bg-[#FFF] rounded-lg md:sticky md:top-14">
+            <div className="w-full p-6 md:p-10 border-b border-gray-500">
               <div className="flex flex-col gap-2 w-full">
                 <p className="text-gray-100 text-sm font-semibold">
                   Plano escolhido:

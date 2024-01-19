@@ -12,7 +12,7 @@ export function PlanosFooter() {
         <ExatoLogo className="w-[105px] h-[36px] fill-gray-100" />
 
         <div>
-          <p className="text-xs text-gray-100 font-medium transition-all duration-200 hover:text-orange-200 flex items-center gap-2 hidden md:inline-block">
+          <p className="text-xs text-gray-100 font-medium transition-all duration-200 hover:text-orange-200 md:flex items-center gap-2 hidden">
             <Envelope className="fill-orange-200" />
             suporte@revistaexato.com
           </p>

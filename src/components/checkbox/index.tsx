@@ -8,14 +8,14 @@ export default function Checkbox() {
   return (
     <div
       onClick={() => setChecked(!checked)}
-      className={`w-4 h-4 rounded-[4px] border cursor-pointer flex items-center justify-center ${
+      className={`w-4 h-4 rounded-[4px] border cursor-pointer flex items-center justify-center flex-shrink-0 ${
         checked ? 'border-orange-200' : 'border-gray-400'
       }`}
     >
       <input type="checkbox" className="hidden" />
 
       <div
-        className={`w-3 h-3 bg-orange-200 rounded-[3px] ${
+        className={`w-3 h-3 bg-orange-200 rounded-[3px] flex-shrink-0 ${
           !checked && 'hidden'
         }`}
       />

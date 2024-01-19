@@ -42,14 +42,10 @@ function formatCardNumber(cardNumber: string) {
 function formatExpiryDate(expiryDate: string) {
   // Verifica se a data é maior que 2 caracteres e insere uma barra "/"
   if (expiryDate?.length > 2) {
-    return (
-      expiryDate?.substring(0, 2) +
-      ' / ' +
-      expiryDate?.substring(2).padEnd(2, '*')
-    )
+    return expiryDate?.substring(0, 2) + expiryDate?.substring(2).padEnd(2, '*')
   } else {
     // Preenche com asteriscos se tiver menos de 2 caracteres
-    return expiryDate?.padEnd(2, '*') + ' / **'
+    return expiryDate?.padEnd(2, '*') + '/**'
   }
 }
 
@@ -80,31 +76,36 @@ export default function CardAnimation({
           ? {
               backgroundImage: `url(${CardBg.src})`,
               backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
+              transform: 'rotateY(360deg)',
+            }
+          : {
               transform: 'rotateY(180deg)',
             }
-          : {}
       }
-      className="w-[335px] h-[200px] p-8 bg-gray-500 rounded-xl transition-all duration-500 ease"
+      className="md:w-[335px] h-[200px] p-8 bg-gray-500 rounded-xl transition-all duration-500 ease"
     >
       <div
         style={
           number?.length > 4
             ? {
+                transform: 'rotateY(360deg)',
+              }
+            : {
                 transform: 'rotateY(180deg)',
               }
-            : {}
         }
         className="flex flex-col gap-7"
       >
         {number?.length > 4 ? renderCardBrandLogo() : <Brand />}
 
-        <p className="text-lg text-gray-300 font-semibold tracking-[4px]">
-          {formatCardNumber(number)}
+        <p className="text-base md:text-lg text-gray-300 font-semibold tracking-[4px]">
+          {number?.length > 0
+            ? formatCardNumber(number)
+            : '**** **** **** ****'}
         </p>
 
         <div className="flex items-center justify-between">
-          <p className="text-gray-300 text-xs font-semibold">
+          <p className="text-gray-300 text-xs font-semibold uppercase">
             {name?.length > 0 ? name : 'NOME E SOBRENOME'}
           </p>
 

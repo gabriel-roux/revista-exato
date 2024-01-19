@@ -65,11 +65,11 @@ export default function AccountForm({
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-[695px] rounded-lg p-14 bg-[#FFF] flex flex-col gap-9"
+      className="md:w-[695px] w-full rounded-lg p-6 md:p-14 bg-[#FFF] flex flex-col gap-9"
     >
-      <header className="flex items-center justify-between w-full">
+      <header className="flex items-start gap-3 md:items-center justify-between flex-col md:flex-row w-full">
         <h2 className="flex items-center gap-[18px] text-orange-200 text-lg font-bold">
-          <span className="w-7 h-7 text-sm items-center justify-center flex rounded-full border border-orange-600">
+          <span className="w-7 h-7 flex-shrink-0 text-sm items-center justify-center flex rounded-full border border-orange-600">
             1
           </span>
 
@@ -160,7 +160,7 @@ export default function AccountForm({
               control={control}
               defaultValue={false}
               render={({ field }) => (
-                <p className="text-gray-200 text-sm flex items-center gap-2">
+                <p className="text-gray-200 text-xs md:text-sm flex items-center gap-2">
                   <Checkbox /> Li e concordo com os Termos de Uso e Política de
                   Privacidade *
                 </p>
@@ -171,7 +171,7 @@ export default function AccountForm({
               control={control}
               defaultValue={false}
               render={({ field }) => (
-                <p className="text-gray-200 text-sm flex items-center gap-2">
+                <p className="text-gray-200 text-xs md:text-sm flex items-center gap-2">
                   <Checkbox /> Quero receber as principais notícias do dia no
                   meu e-mail
                 </p>
