@@ -136,3 +136,7 @@ p {
 .li-noticia:hover svg rect {
   fill: #F24D00 !important;
 }
+
+.input input:focus {
+  border-color: #FF702E;
+}
