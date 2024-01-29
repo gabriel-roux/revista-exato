@@ -15,7 +15,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Revista Exato',
+  title: 'Revista EXATO',
   description: 'Em desenvolvimento',
 }
 
