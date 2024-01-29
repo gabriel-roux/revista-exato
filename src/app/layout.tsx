@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.png" />
         <link href="/dist/output.css" rel="stylesheet" />
       </head>
       <body className={`${manrope.variable} ${ptserif.variable}`}>
