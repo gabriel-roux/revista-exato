@@ -9,7 +9,7 @@ export default function ConfirmarEmailPage() {
   return (
     <main className="flex flex-col md:flex-row justify-between items-center w-full">
       <div className="w-full md:w-1/2 h-screen bg-[white] p-6 md:py-24 md:px-28 flex flex-col gap-14 items-center">
-        <ExatoLogo className="fill-black" />
+        <ExatoLogo className="fill-black w-[146px] h-[50px]" />
 
         <div className="w-full md:max-w-[485px] flex flex-col gap-10">
           <div className="flex flex-col gap-4">
