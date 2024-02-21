@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "tailwind": "npx tailwindcss -i ./src/styles/globals.css -o ./public/dist/output.css --watch",
     "lint": "eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {

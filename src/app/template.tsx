@@ -10,7 +10,8 @@ export default function Template({ children }: { children: ReactNode }) {
   const isSubscriptionPage =
     pathname.includes('/planos') ||
     pathname.includes('/login') ||
-    pathname.includes('/esqueci-minha-senha')
+    pathname.includes('/esqueci-minha-senha') ||
+    pathname.includes('/dashboard')
 
   return (
     <>
