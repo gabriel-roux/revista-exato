@@ -7,6 +7,7 @@ interface NoticeProps {
   image: string
   category: string
   size: 'small' | 'medium' | 'large'
+  breakLine?: boolean
 }
 
 export function Notice({
@@ -15,6 +16,7 @@ export function Notice({
   createdAt,
   image,
   category,
+  breakLine = false,
   size = 'medium',
 }: NoticeProps) {
   const formatDate = (dateString: string) => {
@@ -57,7 +59,11 @@ export function Notice({
       {size === 'small' ? (
         <>
           {!description ? (
-            <div className="notice-card-small flex gap-2 md:gap-5 md:w-[380px] cursor-pointer">
+            <div
+              className={
+                'notice-card-small flex gap-2 md:gap-5 md:w-[380px] cursor-pointer'
+              }
+            >
               <div className="w-[80px] h-[80px] md:w-[96px] overflow-hidden md:h-[96px] rounded-lg bg-gray-100 flex items-center justify-center relative">
                 IMAGEM
                 <div
@@ -81,7 +87,11 @@ export function Notice({
               </div>
             </div>
           ) : (
-            <div className="notice-card-small flex flex-col md:flex-row gap-5 md:w-[795px] cursor-pointer">
+            <div
+              className={`${
+                breakLine && '!flex-col md:!flex-col'
+              } notice-card-small flex flex-col md:flex-row gap-5 md:w-[795px] cursor-pointer`}
+            >
               <div className="min-w-[275px] overflow-hidden h-[185px] rounded-lg bg-gray-100 flex items-center justify-center relative">
                 IMAGEM
                 <div
@@ -89,7 +99,11 @@ export function Notice({
                 />
               </div>
 
-              <div className="w-full md:w-[calc(100%-116px)] flex flex-col gap-3">
+              <div
+                className={`${
+                  breakLine ? 'w-full' : 'w-full md:w-[calc(100%-116px)]'
+                } flex flex-col gap-3`}
+              >
                 <small
                   className={`text-${category} uppercase text-sm font-semibold font-manrope flex items-center`}
                 >
