@@ -11,6 +11,7 @@ import CurrencyDollar from '../icons/currency-dollar'
 import Cog from '../icons/cog'
 import Lifebuoy from '../icons/lifebuoy'
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Sidebar() {
   const pathname = usePathname()
@@ -37,7 +38,8 @@ export default function Sidebar() {
         </div>
 
         <div className="mt-16">
-          <button
+          <Link
+            href="/dashboard"
             className={`w-full h-[60px] flex items-center gap-6 text-gray-300 ${
               pathname === '/dashboard' &&
               'bg-orange-600 border-l-2 border-l-orange-200 !text-black'
@@ -48,7 +50,7 @@ export default function Sidebar() {
               className={
                 pathname === '/dashboard'
                   ? 'fill-orange-200 stroke-orange-200 flex-shrink-0'
-                  : 'fill-[#969696] stroke-[#969696] flex-shrink-0'
+                  : 'fill-[#969696] flex-shrink-0'
               }
             />
 
@@ -59,7 +61,7 @@ export default function Sidebar() {
             >
               Dashboard
             </span>
-          </button>
+          </Link>
           <button
             className={`w-full h-[60px] flex items-center gap-6 text-gray-300 ${
               pathname === '/perfil' &&
