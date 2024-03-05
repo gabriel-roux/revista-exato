@@ -16,6 +16,7 @@ const config: Config = {
         ptserif: ['var(--font-ptserif)'],
       },
       boxShadow: {
+        modal: '0px 12px 36px -2px #080C2F12',
         exato: '0px 10px 22px -4px rgba(0, 0, 0, 0.08)',
         input: '0px 0px 1px 2px #FF702E95',
       },

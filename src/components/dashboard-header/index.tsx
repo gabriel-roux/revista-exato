@@ -3,6 +3,7 @@ import Bell from '../icons/bell'
 import ChatCenteredDots from '../icons/chat-centered-dots'
 import MagnifyGlass from '../icons/magnify-glass'
 import Sun from '../icons/sun'
+import NotificationModal from './notification-modal'
 
 export default function DashboardHeader() {
   return (
@@ -27,13 +28,8 @@ export default function DashboardHeader() {
               <button className="w-[46px] h-[46px] rounded-lg border border-gray-500 flex items-center justify-center">
                 <ChatCenteredDots className="fill-black" />
               </button>
-              <button className="w-[46px] h-[46px] rounded-lg border border-gray-500 flex items-center justify-center relative">
-                <Bell className="fill-black" />
 
-                <span className="absolute w-4 h-4 rounded-full bg-justiça text-[#FFF] -right-1 -top-1 text-[10px] flex items-center justify-center">
-                  9+
-                </span>
-              </button>
+              <NotificationModal />
             </div>
 
             <div className="flex items-center gap-5">

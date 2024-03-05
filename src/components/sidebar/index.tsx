@@ -44,10 +44,11 @@ export default function Sidebar() {
             } justify-start p-7 flex-shrink-0`}
           >
             <House
+              weight={pathname === '/dashboard' ? 'bold' : 'normal'}
               className={
                 pathname === '/dashboard'
-                  ? 'fill-orange-200 flex-shrink-0'
-                  : 'fill-[#969696] flex-shrink-0'
+                  ? 'fill-orange-200 stroke-orange-200 flex-shrink-0'
+                  : 'fill-[#969696] stroke-[#969696] flex-shrink-0'
               }
             />
 
