@@ -36,7 +36,7 @@ export default function ProfilePage() {
 
               <p className="text-sm flex items-center gap-2 text-gray-100 pt-6">
                 <User className="fill-orange-200 w-[16px]" />
-                Membro fiel desde: 22/07/2023
+                Membro fiel desde: <b>22/07/2023</b>
               </p>
             </div>
           </div>
