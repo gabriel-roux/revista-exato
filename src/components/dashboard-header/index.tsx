@@ -1,5 +1,4 @@
 import ArrowDown from '../icons/arrow-down'
-import Bell from '../icons/bell'
 import ChatCenteredDots from '../icons/chat-centered-dots'
 import MagnifyGlass from '../icons/magnify-glass'
 import Sun from '../icons/sun'
@@ -8,7 +7,7 @@ import NotificationModal from './notification-modal'
 export default function DashboardHeader() {
   return (
     <header className="bg-[#FFF]">
-      <div className="w-full h-[85px] py-5 px-12">
+      <div className="w-full h-[85px] border-b border-gray-500 py-5 px-12">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <MagnifyGlass size={21} className="text-gray-100" />

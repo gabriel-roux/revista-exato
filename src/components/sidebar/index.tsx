@@ -84,15 +84,17 @@ export default function Sidebar() {
               Meu Perfil
             </span>
           </button>
-          <button
+          <Link
+            href="/dashboard/assinatura"
             className={`w-full h-[60px] flex items-center gap-6 text-gray-300 ${
-              pathname === '/assinatura' &&
+              pathname === '/dashboard/assinatura' &&
               'bg-orange-600 border-l-2 border-l-orange-200 !text-black'
             } pl-7`}
           >
             <CreditCard
+              weight={pathname === '/dashboard/assinatura' ? 'fill' : 'normal'}
               className={
-                pathname === '/assinatura'
+                pathname === '/dashboard/assinatura'
                   ? 'fill-orange-200 flex-shrink-0'
                   : 'fill-[#969696] flex-shrink-0'
               }
@@ -105,7 +107,7 @@ export default function Sidebar() {
             >
               Assinatura
             </span>
-          </button>
+          </Link>
           <button
             className={`w-full h-[60px] flex items-center gap-6 text-gray-300 ${
               pathname === '/conteudo' &&
