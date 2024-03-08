@@ -111,7 +111,7 @@ export default function Dashboard() {
             <div className="w-[1px] h-[205px] bg-[#ffffff1e]" />
 
             <div className="flex flex-col gap-6">
-              <CreditCard className="fill-orange-200" />
+              <CreditCard weight="normal" className="fill-orange-200" />
 
               <div className="flex flex-col">
                 <h3 className="font-manrope font-bold text-[18px] text-[white]">
