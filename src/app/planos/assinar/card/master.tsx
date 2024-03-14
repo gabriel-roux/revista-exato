@@ -1,10 +1,14 @@
-export default function MasterBrand() {
+interface MasterBrandProps {
+  className?: string
+}
+
+export default function MasterBrand({ className }: MasterBrandProps) {
   return (
     <svg
       width="47"
       height="29"
       viewBox="0 0 47 29"
-      fill="none"
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
       <ellipse

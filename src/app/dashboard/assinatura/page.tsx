@@ -8,7 +8,13 @@ import Schedule from '@/components/icons/schedule'
 import { useState } from 'react'
 import Image from 'next/image'
 import FicCard from '@/assets/fic-card.svg'
-import { PencilSimpleLine, PlusCircle, XCircle } from '@phosphor-icons/react'
+import {
+  Download,
+  PencilSimpleLine,
+  PlusCircle,
+  XCircle,
+} from '@phosphor-icons/react'
+import MasterBrand from '@/app/planos/assinar/card/master'
 
 export default function AssinaturaPage() {
   const [page, setPage] = useState(1)
@@ -54,8 +60,15 @@ export default function AssinaturaPage() {
               page === 3 ? 'text-black' : 'text-gray-300'
             } font-manrope font-medium text-sm transition-all duration-200 relative`}
           >
-            <Schedule size={20} weight="regular" className="fill-gray-300" />
+            <Schedule
+              size={20}
+              weight={page === 2 ? 'fill' : 'regular'}
+              className={page === 2 ? 'fill-orange-200' : 'fill-gray-300'}
+            />
             Histórico de Pagamento
+            {page === 3 && (
+              <span className="w-full h-[2px] rounded-full bg-orange-200 absolute -bottom-5 right-0" />
+            )}
           </button>
         </div>
       </header>
@@ -132,7 +145,7 @@ export default function AssinaturaPage() {
               </div>
             </div>
           </div>
-        ) : (
+        ) : page === 2 ? (
           <div className="flex items-start justify-between gap-[112px]">
             <div className="w-[624px] flex flex-col gap-7">
               <div className="w-full p-8 border border-orange-200 rounded-lg flex items-center gap-12 relative">
@@ -211,6 +224,92 @@ export default function AssinaturaPage() {
                 </button>
               </div>
             </div>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-8">
+            <header className="flex items-center justify-between gap-4">
+              <p className="text-sm text-gray-200 font-medium">
+                Assinatura: Plano Mensal
+              </p>
+
+              <div className="flex items-center gap-4">
+                <p className="text-sm text-gray-200 font-medium">
+                  Filtrar por período:
+                </p>
+
+                <select className="border border-gray-500 rounded-lg px-4 py-2 text-gray-200 font-manrope font-medium text-sm">
+                  <option value="">Mês atual</option>
+                </select>
+              </div>
+            </header>
+
+            <table>
+              <thead>
+                <tr>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4 rounded-l-lg">
+                    Nº da Invoice
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Nome do Assinante
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Data do Vencimento
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Forma de Pagamento
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Plano
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Valor ($)
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4">
+                    Status
+                  </th>
+                  <th className="text-xs font-medium text-gray-300 bg-gray-700 px-8 py-4 rounded-r-lg">
+                    Baixar
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th className="py-6 px-8 text-xs font-manrope text-black font-semibold border-b border-gray-500">
+                    #45647946
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-gray-200 font-medium border-b border-gray-500">
+                    Andressa Nunes
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-gray-200 font-medium border-b border-gray-500">
+                    20/12/2023
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-gray-200 font-medium border-b border-gray-500">
+                    <div className="flex items-center gap-2">
+                      <MasterBrand className="w-7 h-7" />
+                      **** 4578
+                    </div>
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-gray-200 font-medium border-b border-gray-500">
+                    Mensal
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-gray-200 font-medium border-b border-gray-500">
+                    $ 3.90
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-black font-semibold border-b border-gray-500">
+                    <span className="bg-[#DBECFC] text-[#057EED] px-4 py-2 rounded-full">
+                      Em dia
+                    </span>
+                  </th>
+                  <th className="py-6 px-8 text-xs font-manrope text-black font-semibold border-b border-gray-500">
+                    <Download
+                      size={20}
+                      weight="regular"
+                      className="fill-gray-300 cursor-pointer hover:fill-orange-200 transition-all duration-200"
+                    />
+                  </th>
+                </tr>
+              </tbody>
+            </table>
           </div>
         )}
       </div>
