@@ -14,6 +14,7 @@ import {
   PlusCircle,
   XCircle,
 } from '@phosphor-icons/react'
+import CaretDown from '@/components/icons/caret-down'
 import MasterBrand from '@/app/planos/assinar/card/master'
 
 export default function AssinaturaPage() {
@@ -237,9 +238,16 @@ export default function AssinaturaPage() {
                   Filtrar por período:
                 </p>
 
-                <select className="border border-gray-500 rounded-lg px-4 py-2 text-gray-200 font-manrope font-medium text-sm">
-                  <option value="">Mês atual</option>
-                </select>
+                <div className="flex items-center gap-2">
+                  <select className="text-sm font-medium text-black bg-[transparent] appearance-none">
+                    <option value="">Mês atual</option>
+                  </select>
+                  <CaretDown
+                    size={16}
+                    weight="bold"
+                    className="fill-orange-200"
+                  />
+                </div>
               </div>
             </header>
 
