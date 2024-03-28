@@ -10,7 +10,7 @@ import { Notice } from '@/components/notice'
 import InstagramLogo from '@/components/icons/instagram'
 import TwitterLogo from '@/components/icons/twitter'
 
-export default function DetalhesRevistasPage() {
+export default function RevistasPage() {
   return (
     <main className="w-full bg-[#FFF]">
       <section className="w-full h-[200px] relative">
